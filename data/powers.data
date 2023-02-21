@@ -1,3 +1,217 @@
-Index,Name,text
-1,Power1,Power1Text
-2,Power2,Power2Text
+Index,Name,Call,Type,Effect
+1,Apathy,Apathy,Mental,"""The target loses the will to do more than what is needed to survive. They will defend themselves if attacked but can't be brought to care about anything."""
+2,Augment,Augment/X,Self,"""Add X to damage calls. Call Augment when roleplaying lifting an incapacitated, bound, or dead character/ They stand and walk with you while you keep a hand on their arm or shoulder. This allows you to carrry and move them alone without having to pick them up IRL. Different sources of Augment stack, up to a maximum of 10"""
+3,Avert Death,Resist,Self,"""This power can only be used when hit with any damage attack that would reduce the user to 0 HP. Dodge all damage from that attack. For the next 10 seconds the user is Immune to damage, cannot attack and must flee from their attackers."""
+4,Awe,Awe,Mental,"""Target likes and is fascinated by the user. The target tries to stay around and speak with the user."""
+5,Banish Demon,Banish Demon (Demon's True Name),Touch,"""The Demon immediately puts on an OOG headband and returns to ST camp where it removes that Vessel from its Character Sheet. The Demon can't be played the rest of this game but it may be played in future games."""
+6,Bestow Patron,Bestow Patron NAME,Touch,"""This power allows a Spirit to claim a character and allow them to take them as their Patron. The target may change the Patron entry on the Character using this power."""
+7,Bind the Tongue,Bind Tongue XXXX,Touch/Condition,"""User states something that has happened in the past as XXXX part of the call. The target gains the Condition Bind Tongue. The Target cannot speak, write, or communicate to anyone about that thing so long as the have this Condition."""
+8,Blind,Blind,Status,"""Target must close their eyes if safe to do so. If not safe to so target must treat everyone and everything as if it is invisible. This status immediately ends when the target takes damage."""
+9,Blood Essense,Bottle Soul,Special/Craft,"""Commit Amaranth on the target then roleplay spitting blood into a bottle. Seal the bottle, make call and fill out tag with the consumed character's name and generation. Any Vampire that drinks the vial is counted as successfully using Amaranth on the tagged vampire and may lower thier generation if it is lower than theirs."""
+10,Breakdown Item,Drain Item,Touch,"""Must be used on Charm or Relic. Remove the tags from the item, tear them up and return the prop to the owner when able. If used on a temporary item, such as a Charm,or a Foci gain 1 Energy. If used on a Relic gain Energy equal to 2x the item's Dot Rating."""
+11,Bury the Wolf,None,Self,"""Remove or hides the red flag they are required to wear so no longer effected by Disturbing Presence. This power lasts for 1 hour during which the user cannot shift to Crinos."""
+12,Chropteran Marauder,None,Transformation,"""Put on a bat mask. Gain the following effects:
+1. Augment +3
+2. Damage Reduction +2
+3. Gain power: Fear"""
+13,Claws,None,Self,"""User can use gray wrapped round boffers with a striking surface between 12"" and 24"". Attacks with these weapons cause Aggravated damage."""
+14,Cleanse Corruption,Cleanse Corruption,Touch,"""Remove Corrupted Condition from the Target"""
+15,Command,Command XXXX,Mental,"""State a single word action as XXXX in the call. The target must complete the stated action before doing anything else. Actions that can be done once, such as ""fall"" are done and then the power expires. Commands that are ongoing, such as ""flee"" last for 1 minute. The power can be used in the middle of a sentence, however only the word after that is part of the call must be followed."""
+16,Conditioning,Conditioning,Condition,"""Add a trigger that delays activation of a mental power until that trigger is met. Conditioning itself cannot be resisted, however the Mental can be resisted normally after it triggers.
+
+Example: Instead of issues the command, “Find and kill Edgar the Gray,” the Vampire can use this devotion to: “When you next see Edgar the Gray, Kill him.”"""
+17,Confusion,Confusion,Mental,"""Target becomes befuddled and confused. They do not remember who, or where, they are or what they were doing. This does not otherwise prevent them from acting."""
+18,Cornered Rat,None,Self,"""Enter Rage Frenzy without needing to shift into Crinos."""
+19,Corpse Mask,None,Self,"""The user appears dead and answers all Sense Health questions with 0 Health Points or with full Agg Damage. They answer Dead to any powers that identify their state, however they are not dead so powers that only work on characters in the Dead state do not work on the user, such as Deathspeak."""
+20,Create Athanos,Create Athanatos,Touch,"""This power must be used on a Dead character. The character is reanimated as a zombie and immediately regains all Health Points. It is still Dead despite having a health pool and retains all of skills, powers and abilities. It is given a purpose by the user (Unresistable False Will that never expires) upon reanimation and must pursue that purpose until it is destroyed, completes it, or Dawn, whichever is first at which point the player goes OOG. Special: This power cannot be used on a Vampire."""
+21,Create Zombie,Animate X,Touch,"""This power must be used on a Dead character. The character is reanimated as a zombie and immediately regains all Health Points. It cannot speak, is still Dead despite having a health pool, can only attack with fist boffers and cannot use any skills, powers or abilities it had when alive and is immune to all mental powers except as noted below. The Player of a Zombie may stop playing the Zombie after ten minutes if they so choose. The user can use the Command power on the Zombie, even if they do not possess it, to give it instructions without spending energy, this is the only mental it is not immune to and it cannot be resisted."""
+22,Cross Over,Umbra Cross,Special,"""User puts on an OOG headband and moves to the Umbra IG space then removes the OOG headband. If in the Umbra do the opposite but enter game space in the woods away from buildings."""
+23,Damage Reduction,None,Self,"""Subract X from all damage that hits the character, except attacks with the Agg call. Attacks cannot be reduced to 0 damage. Damage Reduction from different sources stack, to a maximum of 10. Example: A character with Fortitude 3 and Ridged armor is hit in the armor they reduce the attack by 5, to a mimum of 1."""
+24,Damage Touch,Damage Call,Touch,"""Touch the target and make damage call. Target takes that damage. Damage dealt in this way is not reduced by armor"""
+25,Deathspeak,Deathspeak,Touch,"""Special: This power is only usable on a character who is in the Dead state. For as long as the user is touching the target they will answer any questions asked by the user truthfully as if they were still alive. It will speak the truth but only directly answer the questions."""
+26,Destroy Item,Destroy Item,Special,"""Handle an item for at least 10 second then roleplay breaking it and use call. Remove any game tags from the item, tear them up and return the prop to the owner. The item can no longer be used."""
+27,Destroy the Husk,Decay,Touch,"""The user touches a Character in the Dead state and give the call. The player of the corpse immediately goes OOG as if they have been left alone and the corpse is destroyed."""
+28,Disarm,Disarm,Attack,"""Call when an attack with a Melee weapon hits another Melee weapon. The target must drop that weapon unless the attack is Dodged."""
+29,Discorperate,Discorperate,Self,"""Throw your hands up in the air and give the call then put on an OOG headband. As soon as call is given any actions taken against the user have no effect. The character cannot be played again this game but can be in following ones."""
+30,Disguise Aura,None,Self,"""Can answer however the player wishes to Sense Faction, Sense Aura, Sense Taint, Sense Corruption, Sense Truth or Sense Lies. The Character still doesn't know that a sensory power was used on them."""
+31,Distract,Distract,Touch,"""Cannot be used in Combat. The target is momentarily distracted by bright lights and sound so that they don't notice the character using this power. The target cannot see the user of this power for 1 minute. If the user makes an attack or uses a power with a call this effect ends."""
+32,Drain Energy,Drain Energy,Touch,"""The target loses one energy (Gnosis point/Blood point/Quintessence/Mist Point) per use and the target regains one energy of their type."""
+33,Drain Health,Drain Health,Touch,"""Target suffers 1 damage and the User heals 1 damage"""
+34,Drain Spirit,Drain Spirit,Touch,"""This power can only be used on a spirit or demon. The target suffers 1 damage point and losses 1 gnosis. The user gains 1 Willpower Point. Non-spirits/demon state no effect."""
+35,Drain Will,Drain Will (EMOTION),Touch,"""If the target character is feeling the emotion called then the target loses 1 Willpower Point and the user gains 1 Willpower point and the target stops feeling that emotion. If the target isn't feeling that emotion they call No Effect. SPECIAL: This power cannot be resisted. While this power may be unleashed the Fae only ever gains 1 Willpower from each use of Drain Willpower."""
+36,Draw the Demon,Draw Demon,Touch,"""If the Target is a Demon they immediately move to the Possessed State. If not answer, ""No Effect."""""
+37,Elemental Strike,Add elemental call to attacks,Self,"""Add X Element type to 1 attack call. Source will state which elemental tags can be added"""
+38,End Frenzy,End Frenzy,Touch,"""End the target's Frenzy"""
+39,Enhance Strength,Enhance Strength,Self,"""User gains +2 Augment for 10 minutes"""
+40,Entrancement,Entrancement,Mental,"""The target is enamoured with the user and under the effects of the level 3 Blood Oath. The target is considered the Thrall and the Regent the User."""
+41,Escape Binding,None,Self,"""Remove shackles or rope bindings"""
+42,Fae Portal,Portal,Special,"""The Fae gives the call then takes a step. They then put on an OOG headband and go to ST. They cannot return to game for 1 hour. If Unleashed everyone in range may take the step and travel with the Fae."""
+43,False Will,False Will: Instructions,"Mental, Condition","""State call and then issue a set of instructions that take no more than 60 seconds to convey. The target must then go and complete this task before doing anything else. The Condition is removed when the task is completed. If the target resists the Mental they remove this condition."""
+44,Fealty,Fealty,Condition,"""Target must swear an oath to the user of their own free will. No power can compell an oath to be given although the target does not need to know prior to giving the oath that this power will be used. The user then uses this call and binds the target to the oath. The target cannot act against the oath willingly, even if adhering to it will lead to their death, while they have this condition. This power cannot be resisted. """
+45,Fear,Fear,Mental,"""Target flees from the user for the duration of the power. They will continue to flee for 1 minute even if they can no longer see the source of this power. This mental immediately ends when the target takes damage."""
+46,Feral Mind,Feral Mind,Touch,"""The target losses sense of themselves and behaves as if they are a feral animal. They cannot speak, use skills, or attack with weapons requiring the melee skill, they can still attack with claws and fists. They may still use any powers that do not require speech. At the conlcusion of this power the target remembers nothing of what happened during it."""
+47,Flesh Craft,Flesh Craft,Special,"""Spend at least 1 minute roleplaying molding the target's flesh. Give one of the following effects to the Target:
+
+1. Deal 1 aggravated Damage to the target, add or remove 1 makeup feature for as long as the target has this aggravated damage.
+2. Deal 2 aggravated Damage to the target, they gain Damage Reduction 2 for as long as they have this aggravated damage.
+3. Deal 2 aggravated Damage to the target, they gain Augment 2 on unarmed attacks for as long as they have this aggravated damage.
+
+This power cannot be used to remove makeup requirements of factions or clans."""
+48,Force Delirium,Howl then call Delirium,Howl,"""Every Human who hears the howl and call suffer the effects of Delerium as if the user were in Crinos for 1 minute"""
+49,Force Frenzy,Frenzy,Touch,"""Target enters a Rage Frenzy"""
+50,Force Invisiblity,Cloak Gathering,Touch,"""Force another player to use the Invisibliliy power. So long as contact is maintained the User and Target can see each other, even if they do not have See Invisible.The target cannot voluntarily stop using the Invisibility power while the user maintains contact with them unless they make an attack. The Target is free to walk away from the User, at which point they stop seeing each other unless they have See Invisible. If separated the Target can choose to end the power at will by lowing their hand."""
+51,Force Passion,Passion XXXX,Mental,"""User states an active feeling (cannot be lack of emotion, such as calm) such as joy, hate, jealousy, confidence or excitement. Target feels this emotion to the exlusion of all others."""
+52,Force Sin,Force Sin,Mental,"""Force the target to act in accordance with one of the 7 Deadly Sin; Pride, Envy, Anger, Sloth, Greed, Gluttony or Desire"""
+53,Force Slumber,Force Slumber,Touch,"""Target Demon enters the Slumber State. Non-demons call ""No Effect"""""
+54,Force Truth,Force Truth,Mental,"""Ask the target a question, they must answer truthfully and directly. No clever word smithing."""
+55,Forge Reliquary,None,Special,""""""
+56,Free Tongue,None,Self,"""The user can lie even when compelled to speak the truth and can choose to answer yes or no to Sense Truth or Sense Lie."""
+57,Frenzy Control,None,Self,"""User can choose the initial target of their frenzy without spending a Willpower Point and can always choose to not attack members of their coterie or pack. If a Character possessing this power does not have the ability to Frenzy they also gain the following: Cost: 1 Energy - Enter Rage Frenzy."""
+58,Fuel Rage,Fuel Rage,Special,"""Any character that hears both the howl and the call that possess a Rage Pool adds one Rage Point"""
+59,Give Power,Give Power X,Touch,"""User gives call with X a power on their character sheet. Target may use this power and the user may not for the duration of this power (10 minutes). The Cost is the same as what the User would pay to use the power. The target use their own energy to use the Power and the user should state the cost and duration if applicable. Example: Give Enhance Strength, you can spend 2 energy to gain Augment 2 for 1 minute."""
+60,Grievous Wounds,Grievous Wounds,"Touch, Condition","""While the target has this condition any damage they receive is Aggravated. Powers that convert Aggravated damage to Regular Damage may be used normally."""
+61,Hallucinate,Hallucinate ,Mental,"""User states the call then a thing using no more than 3 words, such as Colorful Lights, Floor's on Fire or Rampaging Beast. The target sees this thing for the duration of the power. """
+62,Heal Self,None,Self,"""Heal 1 Hit Point OR Spend an additional energy to heal 1 Aggravated Damage. """
+63,Healing Touch,Healing x,Touch,"""Heal Hit Points of the targetas specified in the power. Double activation cost: Call: Healing Agg specified in power source.This power cannot be used on yourself"""
+64,Hypnotize,Hypnotize,Mental,"""Lock eyes with the target. Target must do nothing but look into the users eyes. The user can ask questions that the target will answer truthfully with the shortest answer possible. This power ends if the user looks away or either the User or Target takes damage"""
+65,Immobilize,Immobilize,Status,"""Target chooses 1 foot when affected by this power. That foot cannot move other than to pivot but they can otherwise act normally."""
+66,Immunity XXXX,Immune,Self,"""Chracter is immune to damage from XXXX or power XXXX, as stated in the source of the power. If a Vampire also immune to Fear frenzy caused by being hit with XXXX damage."""
+67,Invisibility,None,Self,"""Raise one hand in front of you face with your palm facing you and your fingers spread open. Other characters cannot perceive you IG and any attacks directed at you without the ""Cloaksight"" call are ignored. Using any power other than a self power or attacking immediately ends this power. The source of this power may have other requirements for it's activation or duration."""
+68,Iron Will,Resist,Self,"""Resist one Mental effecting your character."""
+69,Madness,Madness,Mental,"""Target losses all sense of who anyone is. For the duration of the power they forget everything they know about all charactes and see all characters as hostile and untrustworthy."""
+70,Magic Armor,Magic Armor,Self,"""User gains Damge Reduction 2 and Soak Agg 2 for 10 minutes"""
+71,Majesty,Majesty,Self,"""The user must hold one hand outstretched over their head with palm facing up for the duration of this power. While active those who can see the user must spend a Will Powerpoint to attack or contradict them."""
+72,Mind Shatter,Mind Shatter,Condition,"""The user must converse with the target for at least 1 minute before using this power. The target gains the Mind Shatter Condition. While under the effects of this condition the target cannot spend Willpower Points."""
+73,Mist Form,Mist Form,Transformation,"""Put on a silver mask that covers at least half of your face and use the call. Gain the following effects:
+1. Immune to Weapon, Boffer and Touch damage attacks that do not have an elemental call
+2. Immune to status
+3. Gain Power Unfettered
+4. Cannot attack with weapons or boffers or weild a shield.
+5. A vampire in Mist Form takes no damage Sunlight and is Immune to damage with the Light call.
+6. Cannot move faster than a walk unless the character spends a Rage or has Celerity and spends 1 Blood Point. Then they can run for 1 minute"""
+74,Mist Sleep,None,Self,"""Can sleep while in Mist Form while wearing the mask or attaching it prominently to your bed"""
+75,Mix Form,None,Self,"""Use claw boffers granted by a Transformation power without wearing the required mask. May also speak normally while in Crinos form."""
+76,Monstrous Form,None,Transformation,"""User puts on a Monster mask. Gain the following effects:
+1. Augment + 2
+2. Damage Reduction +1"""
+77,Nightmare,Nightmare XXXX,Mental,"""The user calls Nightmare and a short, no more than one sentence situation. The target experiences the stated situation as a nightmare, unable to do anything but react to hallucination. This power ends if the Target takes damage."""
+78,Pain Wrack,Pain Wrack,Status,"""Target is overcome with searing pain.They cannot attack, can move no faster than a walk and must roleplay being in extreme agony. The target can still defend themselves and attack."""
+79,Paralyze,Paralyze,Status,"""Target must freeze and is unable to attack, walk or move. This status immediately ends when the target takes damage."""
+80,Paranoia,Paranoia,Mental,"""The target hears quiet insults in every conversation and just knows everyone is secretly out to get them."""
+81,Perfect Disguise,None,Self,"""Can appear as someone else without needing to cover their face and can remove or add cosmetic props while in disguise. User must wear different garb and appear as a different character. This ability cannot be used to simply use a different name."""
+82,Perfect Dodge,Dodge,Self,"""Take no damage from a single weapon or packet attack."""
+83,Possession,Possession,Touch,"""the User of this power must be a Demon. Touch an object, give the call and then go OOG. Return to ST camp to add the Reliquary Tag to the touched item and add it to the Demon's Character Sheet under Vessels. If used on a PC that Character must be willing. If Used on an NPC the players check who has the most Willpower Points. The winner reduces their Willpower Points by the amoung the loser possessed. If the Demon is the winner the NPC is now a Vessel and is added to the Demon's Character Sheet."""
+84,Power at a Price,None,Self,"""The user roars. For 1 minute they gain +3 Augement. When the power ends they are unable to use bows, melee or natural weapons for 10 minutes."""
+85,Power from Pain,None,Self,"""May suffer 1 Aggravated Damage in place of spending energy to cast a spell or otherwise activate a power. This damage cannot be converted to Regular damage through any means, including the Soak Agg power."""
+86,Power Theft,Power Theft XXXX,Touch,"""Name a Power. If the target has that power on their character sheet they
+ treat it as if it was not for ten minutes. For ten minutes you may use 
+this power.
+If the Target does not have the stated power they reply 
+with ""No Effect"". Any energy expenditures required to use the stolen 
+power cost the listed energy type in the source of this power."""
+87,Precognition X,Dodge,Self,"""Take no damage from the next X weapon or packet attacks within one minute"""
+88,Pure Form,Pure Form,Self,"""The user puts on their Fae Mask if not already in their Fae Mien. For the next 10 minutes the user gains Augment 3 and Damage Resist 3. When Unleashed this power can only affect and be resisted by other Fae."""
+89,Range Agg,X Agg,Self,"""Throw a packet that deals X Aggravated Damage. X is definied in source of the Power."""
+90,Range Damage,Damage call,Self,"""Throw a packet that deals X damage. Usually this also has an elemental tag such as Fire, Blood or Spark but not always. If no elemental tag is included characters see the packet as a generic ball of energy that causes injury."""
+91,Razor Claws,None,Self,"""Spend at least 10 second roleplaying sharpening your Claw boffers. Gain Augment +1 while using Claws. This power ends when the user is no longer holding their Claw boffers."""
+92,Read Magic,None,Sensory,"""See and read tags and take information on them IG as character knowledge """
+93,Read Thoughts,Read Thoughts,Mental,"""Target tells the user what they are currently thinking about. """
+94,Reincarnation,,,"""This power requires the corpse of the character to be reincarnated. The user of this power spends 5 Willpower Points in addition to any costs needed to activate this power. The target and user then go to ST where the following modifications are done to the target's character sheet:
+1. Character is no longer dead
+2. Character name is changed
+3. Target character may choose to stay the same faction. If they do they remove 1 dot from powers for every 4 they possess rounding to the closes number. Humans instead lose skill dots in the same ratio
+4. Target character may choose to become Human. If they do remove all abilities granted by their prior faction template. They keep their WIll Power dots and Skill dots and lose nothing further.
+
+After the character is revived they cannot use their old name unless they are also using the disguise rules or Perfect Disguise. They retain all character knowledge but do not remember anything around the time they died (at least 1 hour)"""
+95,Remove Condition,Remove Condition,Touch,"""1 Condition is removed from the target. This power cannot remove the Corruption Condition. If the Target has multiple conditions the target chooses which is removed."""
+96,Remove Heart,Remove Heart,Self,"""Spent 30 minutes in ritual roleplay. As part of this ritual mimic opening your chest, pulling out your heart and placing it in a container. Use of the power requires both a heart prop and a container prop. Fill out the tag and attach it to the heart prop. Gain the following effects:
+1. Immune to staking
+2. Can no longer enter frenzy and is Immune to all powers that force Frenzy
+3. Any character that stabs the heart prop with a wooden stake while the User can see it causes the User to be staked.
+4. If the user is shown the destroyed tag from the heart prop the character immediately moves to dead."""
+97,Remove Memory,Remove Memory: XXXX,Touch,"""User states the call were XXXX is the memory to be removed. Target losses that memory from Character Knowledge. Alternatively the user can call ""Last 10 minutes,"" for XXXX to have the target forget everything that happened within the last 10 minutes and remove it from Character Knowledge.
+Example: Remove Memory I was not here the last 10 minutes - Target doesn't remember the user being here.
+Example 2: Remove Memory William never attacked you last night - Target doesn't remember William attacking them."""
+98,Remove Mental,Remove Mental,Touch,"""1 Mental effect is removed from the Target. If the target is under more than 1 Mental the target chooses which is removed"""
+99,Remove Status,Remove Status,Touch,"""1 Status is removed from the Target. If the Target is under more than 1 Status the target chooses which is removed."""
+100,Repair Item,Repair,Touch,"""Touch an item that requires mantenence, such as armor, a broken lock or a broken weapon. That item is repaired and can be used again instantly. This cannot repair magic items or items that grant powers."""
+101,Repel,Repel,Mental,"""User holds their hand with palm facing towards the target. Target cannot attack, use powers against or approach within 10 feet of the user until they stop holding their hand toward the target"""
+102,Resist Corruption,None,Self,"""User is not effected by the Corruption Condition tied to an attack or power use that hit them. This power can't remove Corruption already applied, only prevent the condition from being applied to the user."""
+103,Resist Frenzy,Resist,Self,"""User can spend Energy (identified in source of power) instead of Willpower to resist any situation or power that would force them to Frenzy."""
+104,Resist Poison,Resist,Self,"""Give call when poison tag is revealed. User is not affected by the poison."""
+105,Resist Status,Resist,Self,"""Can be used to remove a Status effect from the user."""
+106,Resist X,Resist,Self,"""Resist the specific Power, Element, Material or Condition named in the source for this power. If a material or elemental type is listed instead resist X damage from sources with that dDamage Type as detailed in the source for that power."""
+107,Restore Will,Restore Will,Self,"""Gain 1 Willpower Point. You can be effected by this twice per day."""
+108,Resurrection,Resurrection,Touch,"""This power requires the corpse of the character to be reincarnated. The user of this power spends 5 Willpower Points in addition to any costs needed to activate this power. The target is no longer dead but suffers under the following effects and conditions for the time listed, no power or ability may end these effects early.
+
+1. Target's Health Pool is reduced by 3. The following game it is reduced by 2, the one after by 1, the one after none.
+2. Target gains Weaken 1 for the rest of this game.
+
+These effects are cumulative and stack for each time the target is ressurected. Example: Gustav was ressurected last game and their Health Pool is currently 8. The die again and Resurrection is used on them again. Their Health Pool is now 5 and they have Weaken 1. They die again the same game and Resurrection is used on them again. Gustav now has a Health Pool of 2 and Weaken 2.
+
+If this power would bring a Character's Health Pool to 0 it has no effect."""
+109,Retain Energy,None,Special,"""Meditate for 1 minute. Regain all energy spent activating X Power, specified in the source, in the last 10 minutes.Example: Character A got in a big fight and spent 8 energy activating Celerity. At the end of the fight they find a quiet place and meditate for 1 minute, activating this power and gaining 8 energy back."""
+110,Retribution,Retribution,Howl,"""User must shout the crime/s the target has commited and call for those present to strike them down then howl. Any character who hears the crimes and the howl gains 1 Willpower point the first time they attack the target within the power's duration."""
+111,Revert Form,Revert Form,Touch,"""The target must remove any mask they are wearing and cannot use any Tranformation powers for 1 minute. Fae must instead put on their Fae mask and cannot remove it for 1 minute."""
+112,Rewind Time,Rewind Time,Touch,"""The user touches a Dead character and removes 1 Willpower Pool (permament Willpower) from their character sheet. The target is no longer dead, has no damage and doesn't remember the last hour of their life but is otherwise uneffected by their death. SPECIAL: If this power is used with Unleashing it doesn't gain the Mass call. Instead it costs the user 1 Willpower Pool and all of their Mists Points."""
+113,Sacred Text,None,Tagged Document,"""As an additional cost to cast Unholy Text spend 1 Willpower then fill out and attach one Unholy Text Tag to the target document. Ritually cast the desired Mental at the time of filling out the tag. You may modify it with Conditioning by ritually casting conditioning at the same time and adding the condition to the tag. If you have the Remove Memory power, you may also ritually cast it and add it to the tag by checking the Remove Memory box to make the target forget having read the document. If this is done it activates at the same time as the Conditioning Trigger.
+
+The first person to read the document with the tag attached without immediatly activating Resist Corruption tears the tag and takes the listed mentals. """
+114,Sanctuary,Sanctuary,Mental/Special,"""Hold both arms outstretched with palms facing outwards. No one can approach closer than 10 feet to the user, attack the user or any character within 10 feet of them. Characters within 10 feet when the power is activated are immune to this effect for the duration of the power. The user can move no faster than a walk.This power lasts until the user lowers their arms."""
+115,Sap Will,Sap Will,Mental,"""Target loses 2 Willpower Points. This power cannot be resisted but can only affect the same character once per hour."""
+116,See Invisible,Cloak Sight,Sensory,"""User can see characters using Invisibility and are immune to the Distract Power. When attacking an invisible character add Cloak Sight to the attack call."""
+117,Sense Agg,Sense Agg,Sensory,"""Target states how many how many Hit Points they have lost to Aggravated Damage"""
+118,Sense Amaranth,Sense Amaranth,Sensory,"""Target states yes if they have committed Amaranth per the Amaranth rules."""
+119,Sense Aura,Sense Aura/Sense Condition,Sensory,"""Target tells the user the primary emotions they are experiencing. If, instead, the user spends a Willpower Point during the activation of this power they can add the Sense Condition call. The target answers Yes if they are under the effects of a Condition other than Wyrm Taint or Corruption."""
+120,Sense Ban,Sense Ban,Sensory,"""Non-Spirits answer: No Effect. Spirits answer with 1 of their Bans. This power can be used on the same spirit by the same user only once every hour. When used again the Spirit must answer with a different Ban until all Bans are revealed."""
+121,Sense Corruption,Sense Corruption,Sensory,"""Target states Yes if they have the Corruption Condition."""
+122,Sense Demon,Sense Demon,Sensory,"""Non-Demons answer No Effect. Demons must provide their Celestial Name."""
+123,Sense Desire,Sense Desire,Sensory,"""Target responds with their current desire or goal. Subsequent uses provide more detailed information."""
+124,Sense Faction,Sense Faction,Sensory,"""Target tells user character's faction"""
+125,Sense Human,Sense Human,Sensory,"""Target answers yes if they are Human or are on the Road of Humanity with a Rating of 7+"""
+126,Sense Life,Sense Life,Sensory,"""Target states current Hit Points"""
+127,Sense Oath,Sense Oath,Sensory,"""Target states Yes if they have an active Fae Oath"""
+128,Sense Patron,Sense Patron,Sensory,"""Target answers with the name of their Patron. If none state none"""
+129,Sense Power,Sense (Name of Power),Sensory,"""Target reponds with yes if they have the stated power on thier character sheet, no if the do not. Source of this ability will state which power/s can be sensed."""
+130,Sense Quintessence,Sense Quintessence,Sensory,"""Target states number of Quintessence Points they currently have. User may look into the Cray and count the Quintessence beads within."""
+131,Sense Road,Sense Road,Sensory,"""Non-Vampires answer none. Target Vampire states their Road and Road Rating."""
+132,Sense Silver,Sense Silver,Sensory,"""Target states ""Yes,"" if they posses a Silver weapon on their person, ""No"" if the do not."""
+133,Sense Sin,Sense Sin,Sensory,"""Target states the last act they did that they are ashamed of."""
+134,Sense Spirit,Sense Spirit,Sensory,"""Non-Spirits answer No Effect. Spirits must provide their name, rank and at least 1 purview."""
+135,Sense True Name,Sense True Name,Sensory,"""Target Demon answers with it's True Name"""
+136,Sense Truth,Sense Truth,Sensory,"""Target must state if the last statement they made is True or not."""
+137,Sense Will,Sense Will,Sensory,"""Target states their current Willpower Point total."""
+138,Shadow Form,Shadow Form,Transformation,"""Put on a black mask that covers at least half of your face. and gain the following effects:
+1. Immune to Weapon, Boffer and Touch attacks and powers that do not have an elemental call
+2. Immune to Status
+3. Gain Power Unfettered
+4. Take double damage from Fire and Light
+5. Can only attack with Shadow Weapons
+6. Cannot use a shield"""
+139,Shadow Weapons,None,Self,"""May use black covered round boffers 24"" to 48"" long for melee attacks. These must be weilded in 1 hand."""
+140,Sicken,Sicken ,Touch,"""Targets gain the Sickened Condition (A character with the Sickened Condition cannot run and must RP holding back vomit until they spend 1 minute RPing throwin up)."""
+141,Silence,Silence,Status,"""Target can not speak or make any purposeful noise. Example cannot bang loudly on a door, speak, or cough."""
+142,Sleep,Sleep,Touch,"""Target goes to sleep and is Incapacitated (but not dying so does not take any damage). The target stands still in a standing sleep or lays down. This effect is broken if the character takes any damage"""
+143,Soak Agg,None,Self,"""Use this power when you take Aggravated Damage. Convert X Aggravated Damage to Regular Damage. X is definied in the source of the power."""
+144,Song of Rage,Howl Force Frenzy,Special/Howl,"""Everyone who hears the howl and the call immediately enters Rage Frenzy. """
+145,Spread Corruption,Corruption,Special,"""Can be attached to any mental, status or touch power or delivered as it's own power via Touch. Target gains the Corruption Condition.
+May choose to add corrupted markers when Tapping an energy node and using Give, even when not subjest to the Corrupted Condition."""
+146,Stagger,Stagger,Touch,"""Target must immediately move 10 feet (3 large steps) away from the target."""
+147,Stasis,Stasis,Touch.,"""Use on an Dying target. Target doesn't take Agg from Dying for 10 muntes."""
+148,Step Sideways,Umbra Cross,Self,"""Meditate for 1 minute at a doorway or reflective surface large enough for you to crawl through. Put on an OOG headband and move to the Umbra game space. Remove the OOG headband once there. If in the Umbra do the opposite. When moving from the Umbra to the Realm enter Game Space in the woods away from buildings."""
+149,Stone Meld,Stone Meld,Self,"""This power can only be used while touching a natural surface such as dirt, sand or stone. Meditate for 1 minute then put an OOg headband on and go out of game for at least 5 hours. You must return to the same spot to renter game as this character in the same game. When you re-enter game your character acts as if they have gotten 5 hours of continous sleep. You may sleep in an in game space while wearing the OOG headband and putting an OOG card on your bed."""
+150,Subjugate,Subjugate,Mental,"""The target must kneel before the user. They cannot attack, contradact or use powers against the user for the duration of the power. This power ends if the target takes damage."""
+151,Summon,Summon,Mental,"""Cannot be used in combat. Target must come to and follow the user for the duration of the power. This power ends if the Target takes damage."""
+152,Summon Demon,None,Special,"""This power must always be enacted as a ritual in game that takes at least 5 minutes. It must incorperate a circle drawn on the ground and the User must invoke either the Demon's Celestial or True name in the ritual. The User spends 1 Willpower Pool in addition to any other costs for using this power, this cost may be ignored if they instead sacrifice a Human character in the ritual. The User, and any sacrificed character, go to ST and inform ST of the ritual's completion, cost paid and where the circle is in game. They will then do their best to send the named Demon to the circle as soon as able."""
+153,Summon Spirit,None,Special,"""Enter game with X less energy or spend X energy if this power is used during game. Inform ST you wish to summon a spirit and which spirit you wish to summon. X should be 1-4 based on the spirit rank, but can be more if you choose. Submit a form to ST between games that you have used this power. See website for submission form. Use of this power does not guarantee that the Spirit NPC will be played that game."""
+154,Sunder,Sunder,Attack,"""Damage reduction from armor does not reduce the damage from this attack. Shields hit by a Sunder attack give DR 2 instead of parrying the blow."""
+155,Taunt,Taunt,Mental,"""Usable only on a target holding a weapon or boffer in their hand/s. Target can only attack the user for the duration of this power. This power ends if the user is Incapacitated or appears to be incapacitated (user plays dead)."""
+156,Telepathic Command,None,Self,"""The User can use Force Truth, Command, False Will, or Hypnotyze while using Telepathy with the Target"""
+157,Telepathy,Telepathy,Mental,"""Put two fingers to your temple and speak with the target who must do the same. No one besides the User and Target can hear the conversation IG. This power ends when the user drops their fingers from their temple or the target resists."""
+158,Terror,Terror,Touch,"""Target enters a Fear Frenzy"""
+159,Tranquil Mind,Tranquil Mind,Touch,"""Target calls No Effect on the next Mental power used on them."""
+160,Umbra Portal,Breach Portal,Special,"""The user role plays pulling open a portal on a reflective surface large enough to crawl through or doorway. While the user is touching the surface used anyone who walks through the doorway or touches the reflective surface puts on an OOO headback and moves to the Umbra play space. If in the Umbra do the opposite. When moving from the Umbra to the Realm enter Game Space in the woods away from buildings"""
+161,Unfettered,None,Self,"""User removes any restrains, such as rope or shackles, and ignores locks.They can open locked doors and chests without any sign that lock has been breached."""
+162,Visions,None,Special,"""Gain a visions card at check in. If this power has an associated cost do not read the card until that cost is paid. If used during game go to ST at earliest convenience and get a visions card."""
+163,Weaken,Weaken,Status,"""Target reduces the damage they deal by 1 each time they are hit by this power, to a minimum of 1. Resisting this status will remove all weaken effects and the player will be able to once again use their full strength """
+164,Wither,Wither,Touch,"""Touched arm can not be used for 1 minute and must hang limp. Attacks that hit it still deal damage."""
