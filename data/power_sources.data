@@ -1,0 +1,4 @@
+Index,Power,SourceTree,TreeRank,EnergyCost,TempWPCost,PermWPCost
+1,Power1,Tree1,1,1,0,0
+2,Power2,Tree2,1,0,1,0
+3,Power3,Tree3,1,0,0,1
