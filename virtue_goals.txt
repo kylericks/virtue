@@ -1,0 +1,51 @@
+Virtue
+
+Intent:  Create a website to serve as the PC Database for Darkwood Nights LARP.
+
+Technical:  Currently plan to use Django for front end, backend of Python 3.9
+
+Goals:
+    *   Character Management
+        -   New PC Build for all factions
+        -   PC Maintenance
+        -   Item Creation Calculator
+        -   Track all XP spent
+    *   Authentication
+        -   Roles for users
+            --  PC
+            --  Storyteller
+            --  Check-In
+            --  Rules
+        -   Messages
+            --  Notify when XP has been awarded (and amount)
+            --  Notify via E-Mail that teaching has been submitted
+            --  Notify via E-Mail that XP has been spent (receipt)
+            --  Maybe allow notification via SMS?
+        -   Pre-Check in
+            --  Allow pre-check in XP soft spend (effectively pre-set expenditure)
+        -   MFA
+    *   Printing/View in multiple styles
+        -   3x5 Card:       Just the main information, stats and levels
+        -   Page Format:    As above but also with a list of powers
+        -   Verbose:        As above but with fulltext of powers
+    *   Power Database
+        -   Database of powers
+            --  Look up by name, power type, faction, tree name
+            --  Full text of power with annotated errata updates
+    *   Staff Support by Role
+        -   Storyteller:    
+            --  Add NPC XP
+            --  Submit training from NPCs
+            --  Submit Faction or Subfaction changes
+            --  Create NPCs
+        -   Rules:
+            --  Add errata on powers (with timestamp)
+            --  Add powers          
+        -   Check-In:     
+            --  View PC Characters
+            --  Enter Teaching Submissions
+            --  Approvals (this is logistically so it is a '2 key' system)
+                --- Submitted pre-check in
+                --- Faction or Subfaction change (logistics related)
+                --- XP from Attendance and NPCing 
+            --  Print Character Sheets
