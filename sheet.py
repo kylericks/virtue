@@ -2,42 +2,43 @@
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 import csv
+import os
 
 # Variables for Testing
-pc_name = "Peety PC"
-player_name = "Realworld Ralph"
-xp_total = 15
+pc_name = " "
+player_name = " "
+xp_total = str()
 faction = "Mage"
-subfaction = "Veneficti"
+subfaction = "Valdaerman"
 energy_type = "Quintessence"
-health = 10
-willpower = 3
-energy_pool = 10
+health = str()
+willpower = str()
+energy_pool = str()
 awareness = 1
 font = 0
 pc_skills = {
-    "alch": 1,
+    "alch": 0,
     "arch": 0,
     "brwl": 0,
     "doge": 0,
     "esca": 0,
     "frtn": 0,
     "intm": 0,
-    "litr": 1,
+    "litr": 0,
     "lock": 0,
     "medi": 0,
-    "mele": 1,
+    "mele": 0,
     "smth": 0,
     "stel": 0,
-    "trde": 1,
-    "trade_specialty": "Mining"
+    "trde": 0,
+    "trade_specialty": " "
 }
 pc_trees = {
-    "Sin":1,
-    "Abomination":0,
-    "Subversion":1,
-    "Malediction":1,
-    "Diabolism":1
+    "Blot":1,
+    "Fara":0,
+    "Forlog":0,
+    "Galdar":0,
+    "Hjaldar":0
 }
 
 # Variables for stuff and things
@@ -89,38 +90,20 @@ def trade_specialization(name,x,y):
         my_canvas.drawString(x, y, str(name)+": ")
 
 def skills_rank_assessment(name,ability,x,y):
-    if pc_skills.get(ability) == 4:
-        trade_specialization(name,x,y)
-        my_canvas.circle(x+100, y+3, 5, fill=1)
-        my_canvas.circle(x+115, y+3, 5, fill=1)
-        my_canvas.circle(x+130, y+3, 5, fill=1)
-        my_canvas.circle(x+145, y+3, 5, fill=1)     
-    elif pc_skills.get(ability) == 3:
-        trade_specialization(name,x,y)
-        my_canvas.circle(x+100, y+3, 5, fill=1)
-        my_canvas.circle(x+115, y+3, 5, fill=1)
-        my_canvas.circle(x+130, y+3, 5, fill=1)
-        my_canvas.circle(x+145, y+3, 5, fill=0)  
-    elif pc_skills.get(ability) == 2:
-        trade_specialization(name,x,y)
-        my_canvas.circle(x+100, y+3, 5, fill=1)
-        my_canvas.circle(x+115, y+3, 5, fill=1)
-        my_canvas.circle(x+130, y+3, 5, fill=0)
-        my_canvas.circle(x+145, y+3, 5, fill=0)  
-    elif pc_skills.get(ability) == 1:
-        trade_specialization(name,x,y)
-        my_canvas.circle(x+100, y+3, 5, fill=1)
-        my_canvas.circle(x+115, y+3, 5, fill=0)
-        my_canvas.circle(x+130, y+3, 5, fill=0)
-        my_canvas.circle(x+145, y+3, 5, fill=0)  
-    elif pc_skills.get(ability) == 0:
-        trade_specialization(name,x,y)
-        my_canvas.circle(x+100, y+3, 5, fill=0)
-        my_canvas.circle(x+115, y+3, 5, fill=0)
-        my_canvas.circle(x+130, y+3, 5, fill=0)
-        my_canvas.circle(x+145, y+3, 5, fill=0)  
-    else:
-        my_canvas.drawString(x, y, "Invalid Value for "+ability)
+    skill_rank = pc_skills.get(ability)
+    dots = 0
+    skills_x = x+100
+    skills_y = y+3
+
+    trade_specialization(name,x,y)
+    while dots <= 3:
+        if skill_rank >= 1:
+            my_canvas.circle(skills_x, skills_y, 5, fill=1)
+        else:
+            my_canvas.circle(skills_x, skills_y, 5, fill=0)
+        dots += 1
+        skill_rank -= 1
+        skills_x = skills_x+15
 
 def skills_block(my_canvas,base_x,base_y):
     x = base_x
@@ -132,33 +115,49 @@ def skills_block(my_canvas,base_x,base_y):
         y = y-15
 
 def powers_rank_assessment(ability,x,y):
-    if pc_trees.get(ability) == 4:
-        my_canvas.circle(x+250, y+3, 5, fill=1)
-        my_canvas.circle(x+265, y+3, 5, fill=1)
-        my_canvas.circle(x+280, y+3, 5, fill=1)
-        my_canvas.circle(x+295, y+3, 5, fill=1)     
-    elif pc_trees.get(ability) == 3:
-        my_canvas.circle(x+250, y+3, 5, fill=1)
-        my_canvas.circle(x+265, y+3, 5, fill=1)
-        my_canvas.circle(x+280, y+3, 5, fill=1)
-        my_canvas.circle(x+295, y+3, 5, fill=0)  
-    elif pc_trees.get(ability) == 2:
-        my_canvas.circle(x+250, y+3, 5, fill=1)
-        my_canvas.circle(x+265, y+3, 5, fill=1)
-        my_canvas.circle(x+280, y+3, 5, fill=0)
-        my_canvas.circle(x+295, y+3, 5, fill=0)  
-    elif pc_trees.get(ability) == 1:
-        my_canvas.circle(x+250, y+3, 5, fill=1)
-        my_canvas.circle(x+265, y+3, 5, fill=0)
-        my_canvas.circle(x+280, y+3, 5, fill=0)
-        my_canvas.circle(x+295, y+3, 5, fill=0)  
-    elif pc_trees.get(ability) == 0:
-        my_canvas.circle(x+250, y+3, 5, fill=0)
-        my_canvas.circle(x+265, y+3, 5, fill=0)
-        my_canvas.circle(x+280, y+3, 5, fill=0)
-        my_canvas.circle(x+295, y+3, 5, fill=0)  
-    else:
-        my_canvas.drawString(x, y, "Invalid Value for "+ability)
+    power_rank = pc_trees.get(ability)
+    dots = 0
+    powers_x = x+250
+    powers_y = y+3
+
+    while dots <= 3:
+        if power_rank >= 1:
+            my_canvas.circle(powers_x, powers_y, 5, fill=1)
+        else:
+            my_canvas.circle(powers_x, powers_y, 5, fill=0)
+        dots += 1
+        power_rank -= 1
+        powers_x = powers_x+15
+
+def awareness_rank_assessment(x,y):
+    dots = 0
+    awareness_x = x
+    awareness_y = y
+    awareness_temp = awareness
+
+    while dots <= 3:
+        if awareness_temp >= 1:
+            my_canvas.circle(awareness_x, awareness_y, 5, fill=1)
+        else:
+            my_canvas.circle(awareness_x, awareness_y, 5, fill=0)
+        dots += 1
+        awareness_temp -= 1
+        awareness_x = awareness_x+15
+
+def font_rank_assessment(x,y):
+    dots = 0
+    font_x = x
+    font_y = y
+    font_temp = font
+
+    while dots <= 4:
+        if font_temp >= 1:
+            my_canvas.circle(font_x, font_y, 5, fill=1)
+        else:
+            my_canvas.circle(font_x, font_y, 5, fill=0)
+        dots += 1
+        font_temp -= 1
+        font_x = font_x+15
 
 def power_block(my_canvas,x,y):
     power_x = x
@@ -171,71 +170,15 @@ def power_block(my_canvas,x,y):
     elif faction == "Vampire":
         pass
     elif faction == "Mage":
-        trees_doc = open("mage_trees.data","r")
+        trees_doc = open(os.path.join(os.path.dirname(__file__),'data','mage_trees.data'),"r")
         trees_dict = csv.DictReader(trees_doc)
         trees_list = []
-        my_canvas.drawString(x+210, y-90, "Magic Skills")
-        my_canvas.drawString(x+170, y-105, "Awareness: ")
-        if awareness == 4:
-            my_canvas.circle(x+250, y-102, 5, fill=1)
-            my_canvas.circle(x+265, y-102, 5, fill=1)
-            my_canvas.circle(x+280, y-102, 5, fill=1)
-            my_canvas.circle(x+295, y-102, 5, fill=1)
-        elif awareness == 3:
-            my_canvas.circle(x+250, y-102, 5, fill=1)
-            my_canvas.circle(x+265, y-102, 5, fill=1)
-            my_canvas.circle(x+280, y-102, 5, fill=1)
-            my_canvas.circle(x+295, y-102, 5, fill=0)
-        elif awareness == 2:
-            my_canvas.circle(x+250, y-102, 5, fill=1)
-            my_canvas.circle(x+265, y-102, 5, fill=1)
-            my_canvas.circle(x+280, y-102, 5, fill=0)
-            my_canvas.circle(x+295, y-102, 5, fill=0)  
-        elif awareness == 1:
-            my_canvas.circle(x+250, y-102, 5, fill=1)
-            my_canvas.circle(x+265, y-102, 5, fill=0)
-            my_canvas.circle(x+280, y-102, 5, fill=0)
-            my_canvas.circle(x+295, y-102, 5, fill=0)  
-        else:
-            pass
-        my_canvas.drawString(x+170, y-120, "Font: ")
-        if font == 5:
-            my_canvas.circle(x+250, y-117, 5, fill=1)
-            my_canvas.circle(x+265, y-117, 5, fill=1)
-            my_canvas.circle(x+280, y-117, 5, fill=1)
-            my_canvas.circle(x+295, y-117, 5, fill=1)
-            my_canvas.circle(x+310, y-117, 5, fill=1)
-        elif font == 4:
-            my_canvas.circle(x+250, y-117, 5, fill=1)
-            my_canvas.circle(x+265, y-117, 5, fill=1)
-            my_canvas.circle(x+280, y-117, 5, fill=1)
-            my_canvas.circle(x+295, y-117, 5, fill=1)
-            my_canvas.circle(x+310, y-117, 5, fill=0)
-        elif font == 3:
-            my_canvas.circle(x+250, y-117, 5, fill=1)
-            my_canvas.circle(x+265, y-117, 5, fill=1)
-            my_canvas.circle(x+280, y-117, 5, fill=1)
-            my_canvas.circle(x+295, y-117, 5, fill=0)
-            my_canvas.circle(x+310, y-117, 5, fill=0)
-        elif font == 2:
-            my_canvas.circle(x+250, y-117, 5, fill=1)
-            my_canvas.circle(x+265, y-117, 5, fill=1)
-            my_canvas.circle(x+280, y-117, 5, fill=0)
-            my_canvas.circle(x+295, y-117, 5, fill=0)  
-            my_canvas.circle(x+310, y-117, 5, fill=0)
-        elif font == 1:
-            my_canvas.circle(x+250, y-117, 5, fill=1)
-            my_canvas.circle(x+265, y-117, 5, fill=0)
-            my_canvas.circle(x+280, y-117, 5, fill=0)
-            my_canvas.circle(x+295, y-117, 5, fill=0)
-            my_canvas.circle(x+310, y-117, 5, fill=0)  
-        else:
-            my_canvas.circle(x+250, y-117, 5, fill=0)
-            my_canvas.circle(x+265, y-117, 5, fill=0)
-            my_canvas.circle(x+280, y-117, 5, fill=0)
-            my_canvas.circle(x+295, y-117, 5, fill=0)
-            my_canvas.circle(x+310, y-117, 5, fill=0)
-        my_canvas.drawString(x+190, y-145, "Foundation & Pillars")
+        my_canvas.drawString(power_x+210, power_y+72, "Magic Skills")
+        my_canvas.drawString(power_x+170, power_y+57, "Awareness: ")
+        awareness_rank_assessment(power_x+250,power_y+60)
+        my_canvas.drawString(power_x+170, power_y+42, "Font: ")
+        font_rank_assessment(power_x+250,power_y+45)
+        my_canvas.drawString(power_x+190, power_y+15, "Foundation & Pillars")
         for n in trees_dict:
             if n['Subfaction'] == subfaction:
                 trees_list.append(n['TreeName'])
@@ -250,8 +193,6 @@ def power_block(my_canvas,x,y):
                 my_canvas.drawString(power_x+190, power_y-15, "Foci :")
                 my_canvas.line(power_x+190, power_y-17, power_x+315, power_y-17)
             power_y = power_y-30
-
-
     elif faction == "Fae":
         pass
     else:
