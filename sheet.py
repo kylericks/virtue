@@ -32,6 +32,13 @@ pc_skills = {
     "trde": 1,
     "trade_specialty": "Mining"
 }
+pc_trees = {
+    "Sin":1,
+    "Abomination":0,
+    "Subversion":1,
+    "Malediction":1,
+    "Diabolism":1
+}
 
 # Variables for stuff and things
 skills_list = ["Alchemy", "Archery", "Brawl", "Dodge", "Escape Artist", "Fortune Telling", "Intimidation", "Literacy", "Lockpicking", "Medicine", "Melee", "Smithing", "Stealth", "Trade"]
@@ -58,7 +65,7 @@ def borders(my_canvas,base_x,base_y):
     my_canvas.line(base_x, base_y-70, base_x+560, base_y-70)
     my_canvas.line(base_x, base_y-310, base_x+560, base_y-310)
     my_canvas.line(base_x+160, base_y-70, base_x+160, base_y-310)
-    my_canvas.line(base_x+320, base_y-70, base_x+320, base_y-130)
+    my_canvas.line(base_x+320, base_y-70, base_x+320, base_y-310)
     my_canvas.line(base_x+160, base_y-130, base_x+320, base_y-130)
 
 
@@ -81,7 +88,7 @@ def trade_specialization(name,x,y):
     else:
         my_canvas.drawString(x, y, str(name)+": ")
 
-def rank_assessment(name,ability,x,y):
+def skills_rank_assessment(name,ability,x,y):
     if pc_skills.get(ability) == 4:
         trade_specialization(name,x,y)
         my_canvas.circle(x+100, y+3, 5, fill=1)
@@ -121,20 +128,52 @@ def skills_block(my_canvas,base_x,base_y):
     my_canvas.drawString(base_x+60, base_y-90, "Skills")
     for name in skills_list:
         skill_abbr = skills_dict.get(name)
-        rank_assessment(name,skill_abbr,base_x,y)
+        skills_rank_assessment(name,skill_abbr,base_x,y)
         y = y-15
+
+def powers_rank_assessment(ability,x,y):
+    if pc_trees.get(ability) == 4:
+        my_canvas.circle(x+250, y+3, 5, fill=1)
+        my_canvas.circle(x+265, y+3, 5, fill=1)
+        my_canvas.circle(x+280, y+3, 5, fill=1)
+        my_canvas.circle(x+295, y+3, 5, fill=1)     
+    elif pc_trees.get(ability) == 3:
+        my_canvas.circle(x+250, y+3, 5, fill=1)
+        my_canvas.circle(x+265, y+3, 5, fill=1)
+        my_canvas.circle(x+280, y+3, 5, fill=1)
+        my_canvas.circle(x+295, y+3, 5, fill=0)  
+    elif pc_trees.get(ability) == 2:
+        my_canvas.circle(x+250, y+3, 5, fill=1)
+        my_canvas.circle(x+265, y+3, 5, fill=1)
+        my_canvas.circle(x+280, y+3, 5, fill=0)
+        my_canvas.circle(x+295, y+3, 5, fill=0)  
+    elif pc_trees.get(ability) == 1:
+        my_canvas.circle(x+250, y+3, 5, fill=1)
+        my_canvas.circle(x+265, y+3, 5, fill=0)
+        my_canvas.circle(x+280, y+3, 5, fill=0)
+        my_canvas.circle(x+295, y+3, 5, fill=0)  
+    elif pc_trees.get(ability) == 0:
+        my_canvas.circle(x+250, y+3, 5, fill=0)
+        my_canvas.circle(x+265, y+3, 5, fill=0)
+        my_canvas.circle(x+280, y+3, 5, fill=0)
+        my_canvas.circle(x+295, y+3, 5, fill=0)  
+    else:
+        my_canvas.drawString(x, y, "Invalid Value for "+ability)
 
 def power_block(my_canvas,x,y):
     power_x = x
-    power_y = y
+    power_y = y-160
     
+    foundations = ["Al-Ikhlas","Deity","Modus","Spontaneity","Sin","Blot","Sensitivity"]
+
     if faction == "Human":
         pass
     elif faction == "Vampire":
         pass
     elif faction == "Mage":
         trees_doc = open("mage_trees.data","r")
-        trees_list = csv.DictReader(trees_doc)
+        trees_dict = csv.DictReader(trees_doc)
+        trees_list = []
         my_canvas.drawString(x+210, y-90, "Magic Skills")
         my_canvas.drawString(x+170, y-105, "Awareness: ")
         if awareness == 4:
@@ -197,20 +236,20 @@ def power_block(my_canvas,x,y):
             my_canvas.circle(x+295, y-117, 5, fill=0)
             my_canvas.circle(x+310, y-117, 5, fill=0)
         my_canvas.drawString(x+190, y-145, "Foundation & Pillars")
-        if subfaction == "Ahl-i-Batin":
-            pass
-        elif subfaction == "Messianic Voice":
-            pass
-        elif subfaction == "Old Faith":
-            pass
-        elif subfaction == "Order of Hermes":
-            pass
-        elif subfaction == "Spirit Talker":
-            pass
-        elif subfaction == "Valdaerman":
-            pass
-        elif subfaction == "Veneficti":
-            pass        
+        for n in trees_dict:
+            if n['Subfaction'] == subfaction:
+                trees_list.append(n['TreeName'])
+        print(trees_list)
+        for n in trees_list:
+            if n in foundations:
+                my_canvas.drawString(power_x+170, power_y, n)
+                powers_rank_assessment(n,power_x,power_y)
+            else:
+                my_canvas.drawString(power_x+170, power_y, n)
+                powers_rank_assessment(n,power_x,power_y)
+                my_canvas.drawString(power_x+190, power_y-15, "Foci :")
+                my_canvas.line(power_x+190, power_y-17, power_x+315, power_y-17)
+            power_y = power_y-30
 
 
     elif faction == "Fae":
@@ -219,10 +258,24 @@ def power_block(my_canvas,x,y):
         my_canvas.drawString(base_x+170, base_y-90, "Invalid Faction.  Get it together "+player_name)
 
 
+def rotes_block(my_canvas,x,y):
+    rotes_x = x+330
+    rotes_y = y-90
+    rotes = 10
+
+    my_canvas.drawString(rotes_x+85, rotes_y, "Rotes")
+    while rotes > 0:
+        my_canvas.line(rotes_x, rotes_y-20, rotes_x+230, rotes_y-20)
+        rotes = rotes-1
+        rotes_y = rotes_y-20
+
+
 if __name__ == '__main__':
     my_canvas = canvas.Canvas("sample_sheet.pdf",pagesize=letter)
     borders(my_canvas,base_x,base_y)
     header_block(my_canvas,base_x,base_y)
     skills_block(my_canvas,base_x,base_y)
     power_block(my_canvas,base_x,base_y)
+    if faction == "Mage":
+        rotes_block(my_canvas,base_x,base_y)
     my_canvas.save()
