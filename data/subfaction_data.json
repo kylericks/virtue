@@ -228,7 +228,7 @@
 }
 
 "Fae" : {
-    "Origin" : {
+    "Origin" : [
         "Changeling" : [
             "Mists" : 2,
             "Weaving" : 4,
@@ -256,8 +256,8 @@
             Inanime do not possess blood. Instead they bleed their element. As such they are immune to Drinking and provide no Blood Points to Vampires. They still take the 1 Aggravated damage if bitten.",
             "Weakness" : "Disturbing Presence. Must always use the same Human form and spend 10 minutes roleplaying remodeling their bodies to change to their Human Mien"
         ],
-    },
-    "Court" : {
+    ],
+    "Court" : [
         "Spring" : [
             "Element" : "Earth",
             "Favored Dominion" : "Dawn",
@@ -283,10 +283,178 @@
             "Favored Dominion" : "None",
             "Weakness" : "Can craft oaths equal to half that allowed by their Weaving and Gramyre rounded down",
         ],
-    },
+    ],
     "Gramarye" : [
         "Oaths",
         "Powders",
         "Treasures",
+    ]
+}
+
+"Human" : {
+    "Subfaction" : [
+        "Commoner" : [
+            "XP Cost" : 0,
+            "Aligned Faction" : "None",
+            "Powers" : "None",
+            "Energy" : "None",
+            "Benefits" : "Oaths, Quick to Learn, Additional skill dot (max rank 4) at creation, 6 additional Commodity Tags of your choice as creation.",
+            "Weaknesses" : "The Delirium, The Curse",
+        ],
+        "Ghoul" : [
+            "XP Cost" : 2,
+            "Aligned Faction" : "Vampire",
+            "Powers" : "Disciplines",
+            "Energy" : "Blood",
+            "Benefits" : "Oaths, Quick to Learn, Blood Boosting",
+            "Weaknesses" : "The Delirium, The Curse, Blood Dependence",
+        ],
+        "Kinfolk" : [
+            "XP Cost" : 2,
+            "Aligned Faction" : "Garou",
+            "Powers" : "None",
+            "Energy" : "None",
+            "Benefits" : "Oaths, Quick to Learn, Immune to Delirium",
+            "Weaknesses" : "",
+        ],
+        "Gifted Kinfolk" : [
+            "XP Cost" : 4,
+            "Aligned Faction" : "Garou",
+            "Powers" : "Gifts",
+            "Energy" : "Gnosis",
+            "Benefits" : "Oaths, Quick to Learn, Immune to Delirium",
+            "Weaknesses" : "The Curse",
+        ],
+    ],
+}
+
+"Garou" : {
+    "Breed" : [
+        "Homid" : [
+            "Gnosis" : 2,
+            "Revert" : "Homid",
+            "Weaknesses" : "None",
+            "Benefits" : "Do not take Aggravated damage from silver in Homid form, Can carry 2 silver items without reducing their Gnosis pool.",
+        ],
+        "Metis" : [
+            "Gnosis" : 3,
+            "Revert" : "Crinos",
+            "Weaknesses" : "Capped Renown - Cliath (unless Black Spiral Dancer), All Metis must have a physical deformity as a makeup requirement.",
+            "Benefits" : "No Frenzy due to Duration of Crinos, Learn and use any Metis Gift regardless of rank.",
+        ],        
+        "Lupus" : [
+            "Gnosis" : 4,
+            "Revert" : "Homid",
+            "Weaknesses" : "None",
+            "Benefits" : "None",
+        ],
+    ],
+    "Auspice" : [
+        "Ragabash" : [
+            "Renown Order" : "None",
+            "Renown Modification" : "2 more total renown to gain rank than other Auspices.",
+            "Rage" : 1,
+            "Starting Rite" : "Choice of 1 Dot Rite.",
+        ],
+        "Theurge" : [
+            "Renown Order" : "Wisdom, Glory, Honor",
+            "Renown Modification" : "None",
+            "Rage" : 2,
+            "Starting Rite" : "Summon Spirit",
+        ],
+        "Philodox" : [
+            "Renown Order" : "Honor, Wisdom, Glory",
+            "Renown Modification" : "None",
+            "Rage" : 3,
+            "Starting Rite" : "Rite of Punishment",
+        ],
+        "Galliard" : [
+            "Renown Order" : "Glory, Wisdom, Honor",
+            "Renown Modification" : "None",
+            "Rage" : 4,
+            "Starting Rite" : "Right of Accomplishment",
+        ],
+        "Ahroun" : [
+            "Renown Order" : "Glory, Honor, Wisdom",
+            "Renown Modification" : "None",
+            "Rage" : 5,
+            "Starting Rite" : "None",
+        ],
+    ],
+    "Tribe" : [
+        "Black Fury" : [
+            "XP Cost" : 0,
+            "Special Rules" : "Females only.",
+        ],
+        "Bone Gnawer" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Children of Gaia" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Fenrir" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Fianna" : [
+            "XP Cost" : 4,
+            "Special Rules" : "None",
+        ],
+        "Red Talon" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Shadow Lord" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Silver Fang" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Silent Strider" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Warder of Man" : [
+            "XP Cost" : 0,
+            "Special Rules" : "None",
+        ],
+        "Black Spiral Dancer" : [
+            "XP Cost" : 4,
+            "Special Rules" : "Add Permanently Tainted Merit.",
+        ],
+        "Corax" : [
+            "XP Cost" : 3,
+            "Special Rules" : "Replace Weakness Silver with Weakness Gold, No Metis, No Auspice - Corax have Ragabash as Innate Power tree, When in Crinos form use a Raven mask instead of a Wolf Mask.",
+        ],    
+    ],
+    "Ranks" : [
+        "Unranked" : [
+            "Max Gift Level" : 0,
+            "Renown Required" : 0,
+        ],
+        "Cliath" : [
+            "Max Gift Level" : 1,
+            "Renown Required" : 3,
+        ],        
+        "Fostern" : [
+            "Max Gift Level" : 2,
+            "Renown Required" : 6,
+        ],
+        "Adren" : [
+            "Max Gift Level" : 3,
+            "Renown Required" : 10,
+        ],
+        "Athro" : [
+            "Max Gift Level" : 4,
+            "Renown Required" : 15,
+        ],        
+        "Elder" : [
+            "Max Gift Level" : 4,
+            "Renown Required" : 23,
+        ],
     ]
 }
