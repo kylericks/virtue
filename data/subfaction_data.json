@@ -1,0 +1,292 @@
+"Mage" : [
+    "Ahl-i-Batin" : {
+        "XP Cost" : 4,
+        "Foundation" : "Al-Ikhlas",
+        "Pillars" : [
+            "Al-Anbiya",
+            "Al-Fatihah",
+            "Al-Hajj",
+            "Al-Layl"
+        ]
+    },
+    "Messianic Voice" : {
+        "XP Cost" : 0,
+        "Foundation" : "Deity",
+        "Pillars" : [
+            "Gavri-El",
+            "Mikha-El",
+            "Repha-El",
+            "Uri-El"
+        ]        
+    },
+    "Old Faith" : {
+        "XP Cost" : 0,
+        "Foundation" : "Spontaneity",
+        "Pillars" : [
+            "Autumn",
+            "Spring",
+            "Summer",
+            "Winter"
+        ] 
+    },
+    "Order of Hermes" : {
+        "XP Cost" : 0,
+        "Foundation" : "Modus",
+        "Pillars" : [
+            "Anima",
+            "Corona",
+            "Primus",
+            "Vires"
+        ] 
+    },
+    "Spirit Talker" : {
+        "XP Cost" : 0,
+        "Foundation" : "Sensitivity",
+        "Pillars" : [
+            "Chieftain",
+            "Trickster",
+            "Warrior",
+            "Wise One"
+        ] 
+    },
+    "Valdaerman" : {
+        "XP Cost" : 0,
+        "Foundation" : "Blot",
+        "Pillars" : [
+            "Fara",
+            "Forlog",
+            "Galdar",
+            "Hjaldar"
+        ] 
+    },
+    "Veneficti" : {
+        "XP Cost" : 10,
+        "Foundation" : "Sin",
+        "Pillars" : [
+            "Abomination",
+            "Subversion",
+            "Malediction",
+            "Diabolism"
+        ] 
+    },
+]
+
+"Vampire" : {
+    "Disciplines" : [
+        "Animalism",
+        "Auspex",
+        "Celerity",
+        "Chimerstry",
+        "Daimoinion",
+        "Dementation",
+        "Dominate",
+        "Fortitude",
+        "Mortis - Grave's Decay",
+        "Mortis - Corpse in the Monster",
+        "Mortis - Cadaverous Animation",
+        "Obfuscate",
+        "Obtenebration",
+        "Potence",
+        "Presence",
+        "Protean",
+        "Quietus",
+        "Serpentis",
+        "Valeren Healing",
+        "Valeren Warrior",
+        "Vicissitude"
+    ],
+    "Clans" : [
+        "Brujah" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Cannot resist the Force Passion power and are immune to the End Frenzy power.",
+            "Innate Disciplines" : [
+                "Celerity",
+                "Potence",
+                "Presence",
+            ]
+        },
+        "Cappadocian" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Guise of Death. The Cappadacian must apply pale, corpse-like makeup to their face.",
+            "Innate Disciplines" : [
+                "Auspex",
+                "Fortitude",
+                "Mortis - Grave's Decay",
+                "Mortis - Corpse in the Monster",
+                "Mortis - Cadaverous Animation",
+            ]
+        },    
+        "Lasombra" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Suffer greater damage from the sun. Take 2 Aggravated Damage from the Sun every minute of exposure. Reflection aversion. If you see a reflection of yourself you must move so you can no longer see it.",
+            "Innate Disciplines" : [
+                "Dominate",
+                "Obtenebration",
+                "Potence",
+            ]
+        },
+        "Toreador" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "When in the presence of something the Toreador finds beautiful they become fascinated and distracted. Watching the thing for at least 1 minute. Nothing can break this trance except being attacked and then only if the Toreador spends a Willpower point",
+            "Innate Disciplines" : [
+                "Auspex",
+                "Celerity",
+                "Presence",
+            ]
+        },
+        "Tzimisce" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "At character creation the Tzimizce is given 4 dirt tags which must be attached to pouches of dirt. They must sleep with at least 2 of these pouches visible in game space around where they rest. Failure to sleep surrounded by these dirt tags results in the Tzimisce being unable to spend blood until they are able to sleep 5 continuous hours surrounded by them.",
+            "Innate Disciplines" : [
+                "Animalism",
+                "Auspex",
+                "Vicissitude",
+            ]
+        },    
+        "Ventrue" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Can only drink the blood of a selected group of mortals. Choose a category that roughly cuts the game population in half. The restriction can be more, but not less, narrow. Categories such as gender, hair color, religion, or tradecraft are typical. While they can bite and drink from mortals not part of their category they gain no Blood from it. This feeding restriction doesn’t apply to vampires and a Venture can drink from any vampire whether they are part of their selected group or not.",
+            "Innate Disciplines" : [
+                "Dominate",
+                "Fortitude",
+                "Presence",
+            ]
+        },
+        "Salubri (Healer)" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Must spend a Willpower Point to take an action that causes damage to another character. Exception - A person willing to be bitten and fed from.",
+            "Innate Disciplines" : [
+                "Auspex",
+                "Fortitude",
+                "Valeren Healing",
+            ]
+        },
+        "Salubri (Warrior)" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Must spend a Willpower Point to refuse a request to aid someone in need. This applies once per day per person in need.",
+            "Innate Disciplines" : [
+                "Auspex",
+                "Fortitude",
+                "Valeren Warrior",
+            ]
+        },    
+        "Assamite" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Always answers yes to Sense Amaranth.",
+            "Innate Disciplines" : [
+                "Celerity",
+                "Obfuscate",
+                "Quietus",
+            ]
+        },
+        "Followers of Set" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Followers of Set take damage from sunlight even if fully covered and cannot convert aggravated damage from sunlight or Light element to Regular damage by any means.",
+            "Innate Disciplines" : [
+                "Obfuscate",
+                "Presence",
+                "Serpentis",
+            ]
+        },
+        "Gangrel" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Every time a Gangrel frenzies for any reason other than being targeted by the Frenzy power, the player must come to the next game with a new animal feature as a makeup requirement for the character. Common features are fur, unretractable fangs, slitted eyes, scales, claws and tails but are not limited to this. This can be limited to a max of 5 features if the player wishes.",
+            "Innate Disciplines" : [
+                "Animalism",
+                "Fortitude",
+                "Protean",
+            ]
+        },    
+        "Malkavian" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Malkavians suffer under the maddening truth given to their progenitor. They are Immune to Remove Mental and must choose 6 Cannot resist: Confusion, Distract, Feral Mind, Force Passion, Force Sin, Force Truth, Hallucinate, Madness, Nightmare, Paranoia, Remove Memory, Sleep, Summon, Telepathic Command.",
+            "Innate Disciplines" : [
+                "Auspex",
+                "Dementation",
+                "Obfuscate",
+            ]
+        },
+        "Nosferatu" : {
+            "XP Cost" : 0,
+            "Clan Flaw" : "Disturbing Presence and must wear obviously disfigured and inhuman makeup/props/costumes. No powers can remove these features outside of their own Obfuscate and no powers can remove their Disturbing Presence.",
+            "Innate Disciplines" : [
+                "Animalism",
+                "Obfuscate",
+                "Potence",
+            ]
+        },
+        "Baali" : {
+            "XP Cost" : 10,
+            "Clan Flaw" : "A holy symbol brandished at a Baali and the higher powers invoked prevent them from approaching and they cannot enter holy ground *the town church*. Examples of holy symbols are the Christian Cross, The Star of David, Chants from the Qur’an or a Thor’s Hammer pendant.",
+            "Innate Disciplines" : [
+                "Daimoinion",
+                "Obfuscate",
+                "Presence",
+            ]
+        },    
+    ]
+}
+
+"Fae" : {
+    "Origin" : {
+        "Changeling" : [
+            "Mists" : 2,
+            "Weaving" : 4,
+            "Dominion_Dots" : 2,
+            "Birthright" : "Treat Echoes as one step lower for Changelings. This means that they are not affected by Visible echoes and treat Presence as Visible, Directed as Presence and Called Out as Directed.",
+            "Weakness" : "Start with 1 less dot in Dominions (accounted above) and cannot use Unleashings while not in their Fae Mien."
+        ],
+        "Firstborn" : [
+            "Mists" : 4,
+            "Weaving" : 2,
+            "Dominion_Dots" : 3,
+            "Birthright" : "Firstborn have an easier time Unleashing. If the Unleashing is not resisted the Fae regains 1 Mist Point spent to Unleash the power after 1 minute.",
+            "Weakness" : "The First Born are more susceptible to their Echoes than other Fae. Treat any Echo encountered as 1 step more severe."
+        ],
+        "Inanime" : [
+            "Mists" : 3,
+            "Weaving" : 3,
+            "Dominion_Dots" : 2,
+            "Birthright" : "While in the presence of their chosen element, as defined below, or when they are hit by an attack with their chosen Elemental Damage Type whose source is not themselves they gain the power: Discorperate with the following modification: The Fae Character can return after 8 hours. The Player is encouraged to NPC during this time. In addition Inamime start with 2 Greater Traits instead of 1.
+            a.	Air: When outdoors and the wind is blowing
+            b.	Ice: When touching water, such as rain, mist or a cup of water, snow or ice
+            c.	Earth: When outdoors touching bare earth
+            d.	Fire: When in the presence of a real or tagged fireplace
+            
+            Inanime do not possess blood. Instead they bleed their element. As such they are immune to Drinking and provide no Blood Points to Vampires. They still take the 1 Aggravated damage if bitten.",
+            "Weakness" : "Disturbing Presence. Must always use the same Human form and spend 10 minutes roleplaying remodeling their bodies to change to their Human Mien"
+        ],
+    },
+    "Court" : {
+        "Spring" : [
+            "Element" : "Earth",
+            "Favored Dominion" : "Dawn",
+            "Weakness" : "None",
+        ],
+        "Summer" : [
+            "Element" : "Fire",
+            "Favored Dominion" : "Day",
+            "Weakness" : "None",
+        ],
+        "Autumn" : [
+            "Element" : "Spark",
+            "Favored Dominion" : "Dusk",
+            "Weakness" : "None",
+        ],    
+        "Winter" : [
+            "Element" : "Ice",
+            "Favored Dominion" : "Night",
+            "Weakness" : "None",
+        ],
+        "Solstice" : [
+            "Element" : "Any",
+            "Favored Dominion" : "None",
+            "Weakness" : "Can craft oaths equal to half that allowed by their Weaving and Gramyre rounded down",
+        ],
+    },
+    "Gramarye" : [
+        "Oaths",
+        "Powders",
+        "Treasures",
+    ]
+}
