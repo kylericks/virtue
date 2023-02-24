@@ -1,454 +1,452 @@
-"Mage" : [
-    "Ahl-i-Batin" : {
-        "XP Cost" : 4,
-        "Foundation" : "Al-Ikhlas",
-        "Pillars" : [
-            "Al-Anbiya",
-            "Al-Fatihah",
-            "Al-Hajj",
-            "Al-Layl"
+{
+    "Mage" : {
+        "Ahl-i-Batin" : {
+            "XP Cost" : 4,
+            "Foundation" : "Al-Ikhlas",
+            "Pillars" : [
+                "Al-Anbiya",
+                "Al-Fatihah",
+                "Al-Hajj",
+                "Al-Layl"
+            ]
+        },
+        "Messianic Voice" : {
+            "XP Cost" : 0,
+            "Foundation" : "Deity",
+            "Pillars" : [
+                "Gavri-El",
+                "Mikha-El", 
+                "Repha-El",
+                "Uri-El"
+            ]        
+        },
+        "Old Faith" : {
+            "XP Cost" : 0,
+            "Foundation" : "Spontaneity",
+            "Pillars" : [
+                "Autumn",
+                "Spring",
+                "Summer",
+                "Winter"
+            ] 
+        },
+        "Order of Hermes" : {
+            "XP Cost" : 0,
+            "Foundation" : "Modus",
+            "Pillars" : [
+                "Anima",
+                "Corona",
+                "Primus",
+                "Vires"
+            ] 
+        },
+        "Spirit Talker" : {
+            "XP Cost" : 0,
+            "Foundation" : "Sensitivity",
+            "Pillars" : [
+                "Chieftain",
+                "Trickster",
+                "Warrior",
+                "Wise One"
+            ] 
+        },
+        "Valdaerman" : {
+            "XP Cost" : 0,
+            "Foundation" : "Blot",
+            "Pillars" : [
+                "Fara",
+                "Forlog",
+                "Galdar",
+                "Hjaldar"
+            ] 
+        },
+        "Veneficti" : {
+            "XP Cost" : 10,
+            "Foundation" : "Sin",
+            "Pillars" : [
+                "Abomination",
+                "Subversion",
+                "Malediction",
+                "Diabolism"
+            ] 
+        }
+    },
+    "Vampire" : {
+        "Disciplines" : [
+            "Animalism",
+            "Auspex",
+            "Celerity",
+            "Chimerstry",
+            "Daimoinion",
+            "Dementation",
+            "Dominate",
+            "Fortitude",
+            "Mortis - Grave's Decay",
+            "Mortis - Corpse in the Monster",
+            "Mortis - Cadaverous Animation",
+            "Obfuscate",
+            "Obtenebration",
+            "Potence",
+            "Presence",
+            "Protean",
+            "Quietus",
+            "Serpentis",
+            "Valeren Healing",
+            "Valeren Warrior",
+            "Vicissitude"
+        ],
+        "Clans" : {
+            "Brujah" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Cannot resist the Force Passion power and are immune to the End Frenzy power.",
+                "Innate Disciplines" : [
+                    "Celerity",
+                    "Potence",
+                    "Presence"
+                ]
+            },
+            "Cappadocian" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Guise of Death. The Cappadacian must apply pale, corpse-like makeup to their face.",
+                "Innate Disciplines" : [
+                    "Auspex",
+                    "Fortitude",
+                    "Mortis - Grave's Decay",
+                    "Mortis - Corpse in the Monster",
+                    "Mortis - Cadaverous Animation"
+                ]
+            },    
+            "Lasombra" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Suffer greater damage from the sun. Take 2 Aggravated Damage from the Sun every minute of exposure. Reflection aversion. If you see a reflection of yourself you must move so you can no longer see it.",
+                "Innate Disciplines" : [
+                    "Dominate",
+                    "Obtenebration",
+                    "Potence"
+                ]
+            },
+            "Toreador" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "When in the presence of something the Toreador finds beautiful they become fascinated and distracted. Watching the thing for at least 1 minute. Nothing can break this trance except being attacked and then only if the Toreador spends a Willpower point",
+                "Innate Disciplines" : [
+                    "Auspex",
+                    "Celerity",
+                    "Presence"
+                ]
+            },
+            "Tzimisce" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "At character creation the Tzimizce is given 4 dirt tags which must be attached to pouches of dirt. They must sleep with at least 2 of these pouches visible in game space around where they rest. Failure to sleep surrounded by these dirt tags results in the Tzimisce being unable to spend blood until they are able to sleep 5 continuous hours surrounded by them.",
+                "Innate Disciplines" : [
+                    "Animalism",
+                    "Auspex",
+                    "Vicissitude"
+                ]
+            },    
+            "Ventrue" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Can only drink the blood of a selected group of mortals. Choose a category that roughly cuts the game population in half. The restriction can be more, but not less, narrow. Categories such as gender, hair color, religion, or tradecraft are typical. While they can bite and drink from mortals not part of their category they gain no Blood from it. This feeding restriction doesn’t apply to vampires and a Venture can drink from any vampire whether they are part of their selected group or not.",
+                "Innate Disciplines" : [
+                    "Dominate",
+                    "Fortitude",
+                    "Presence"
+                ]
+            },
+            "Salubri (Healer)" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Must spend a Willpower Point to take an action that causes damage to another character. Exception - A person willing to be bitten and fed from.",
+                "Innate Disciplines" : [
+                    "Auspex",
+                    "Fortitude",
+                    "Valeren Healing"
+                ]
+            },
+            "Salubri (Warrior)" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Must spend a Willpower Point to refuse a request to aid someone in need. This applies once per day per person in need.",
+                "Innate Disciplines" : [
+                    "Auspex",
+                    "Fortitude",
+                    "Valeren Warrior"
+                ]
+            },    
+            "Assamite" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Always answers yes to Sense Amaranth.",
+                "Innate Disciplines" : [
+                    "Celerity",
+                    "Obfuscate",
+                    "Quietus"
+                ]
+            },
+            "Followers of Set" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Followers of Set take damage from sunlight even if fully covered and cannot convert aggravated damage from sunlight or Light element to Regular damage by any means.",
+                "Innate Disciplines" : [
+                    "Obfuscate",
+                    "Presence",
+                    "Serpentis"
+                ]
+            },
+            "Gangrel" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Every time a Gangrel frenzies for any reason other than being targeted by the Frenzy power, the player must come to the next game with a new animal feature as a makeup requirement for the character. Common features are fur, unretractable fangs, slitted eyes, scales, claws and tails but are not limited to this. This can be limited to a max of 5 features if the player wishes.",
+                "Innate Disciplines" : [
+                    "Animalism",
+                    "Fortitude",
+                    "Protean"
+                ]
+            },    
+            "Malkavian" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Malkavians suffer under the maddening truth given to their progenitor. They are Immune to Remove Mental and must choose 6 Cannot resist: Confusion, Distract, Feral Mind, Force Passion, Force Sin, Force Truth, Hallucinate, Madness, Nightmare, Paranoia, Remove Memory, Sleep, Summon, Telepathic Command.",
+                "Innate Disciplines" : [
+                    "Auspex",
+                    "Dementation",
+                    "Obfuscate"
+                ]
+            },
+            "Nosferatu" : {
+                "XP Cost" : 0,
+                "Clan Flaw" : "Disturbing Presence and must wear obviously disfigured and inhuman makeup/props/costumes. No powers can remove these features outside of their own Obfuscate and no powers can remove their Disturbing Presence.",
+                "Innate Disciplines" : [
+                    "Animalism",
+                    "Obfuscate",
+                    "Potence"
+                ]
+            },
+            "Baali" : {
+                "XP Cost" : 10,
+                "Clan Flaw" : "A holy symbol brandished at a Baali and the higher powers invoked prevent them from approaching and they cannot enter holy ground *the town church*. Examples of holy symbols are the Christian Cross, The Star of David, Chants from the Qur’an or a Thor’s Hammer pendant.",
+                "Innate Disciplines" : [
+                    "Daimoinion",
+                    "Obfuscate",
+                    "Presence"
+                ]
+            }    
+        }
+    },
+    "Fae" : {
+        "Origin" : {
+            "Changeling" : {
+                "Mists" : 2,
+                "Weaving" : 4,
+                "Dominion_Dots" : 2,
+                "Birthright" : "Treat Echoes as one step lower for Changelings. This means that they are not affected by Visible echoes and treat Presence as Visible, Directed as Presence and Called Out as Directed.",
+                "Weakness" : "Start with 1 less dot in Dominions (accounted above) and cannot use Unleashings while not in their Fae Mien."
+            },
+            "Firstborn" : {
+                "Mists" : 4,
+                "Weaving" : 2,
+                "Dominion_Dots" : 3,
+                "Birthright" : "Firstborn have an easier time Unleashing. If the Unleashing is not resisted the Fae regains 1 Mist Point spent to Unleash the power after 1 minute.",
+                "Weakness" : "The First Born are more susceptible to their Echoes than other Fae. Treat any Echo encountered as 1 step more severe."
+            },
+            "Inanime" : {
+                "Mists" : 3,
+                "Weaving" : 3,
+                "Dominion_Dots" : 2,
+                "Birthright" : "Elemental attunement, Elemental Discorpoation, 2 Greater Traits, No Blood - Immune to Drinking (No Blood Points; Still take 1 Aggravated Damage).",
+                "Weakness" : "Disturbing Presence. Must always use the same Human form and spend 10 minutes roleplaying remodeling their bodies to change to their Human Mien."
+            }
+        },
+        "Court" : {
+            "Spring" : {
+                "Element" : "Earth",
+                "Favored Dominion" : "Dawn",
+                "Weakness" : "None"
+            },
+            "Summer" : {
+                "Element" : "Fire",
+                "Favored Dominion" : "Day",
+                "Weakness" : "None"
+            },
+            "Autumn" : {
+                "Element" : "Spark",
+                "Favored Dominion" : "Dusk",
+                "Weakness" : "None"
+            },    
+            "Winter" : {
+                "Element" : "Ice",
+                "Favored Dominion" : "Night",
+                "Weakness" : "None"
+            },
+            "Solstice" : {
+                "Element" : "Any",
+                "Favored Dominion" : "None",
+                "Weakness" : "Can craft oaths equal to half that allowed by their Weaving and Gramyre rounded down"
+            }
+        },
+        "Gramarye" : [
+            "Oaths",
+            "Powders",
+            "Treasures"
         ]
     },
-    "Messianic Voice" : {
-        "XP Cost" : 0,
-        "Foundation" : "Deity",
-        "Pillars" : [
-            "Gavri-El",
-            "Mikha-El",
-            "Repha-El",
-            "Uri-El"
-        ]        
+    "Human" : {
+        "Subfaction" : {
+            "Commoner" : {
+                "XP Cost" : 0,
+                "Aligned Faction" : "None",
+                "Powers" : "None",
+                "Energy" : "None",
+                "Benefits" : "Oaths, Quick to Learn, Additional skill dot (max rank 4) at creation, 6 additional Commodity Tags of your choice as creation.",
+                "Weaknesses" : "The Delirium, The Curse"
+            },
+            "Ghoul" : {
+                "XP Cost" : 2,
+                "Aligned Faction" : "Vampire",
+                "Powers" : "Disciplines",
+                "Energy" : "Blood",
+                "Benefits" : "Oaths, Quick to Learn, Blood Boosting",
+                "Weaknesses" : "The Delirium, The Curse, Blood Dependence"
+            },
+            "Kinfolk" : {
+                "XP Cost" : 2,
+                "Aligned Faction" : "Garou",
+                "Powers" : "None",
+                "Energy" : "None",
+                "Benefits" : "Oaths, Quick to Learn, Immune to Delirium",
+                "Weaknesses" : "The Curse"
+            },
+            "Gifted Kinfolk" : {
+                "XP Cost" : 4,
+                "Aligned Faction" : "Garou",
+                "Powers" : "Gifts",
+                "Energy" : "Gnosis",
+                "Benefits" : "Oaths, Quick to Learn, Immune to Delirium",
+                "Weaknesses" : "The Curse"
+            }
+        }
     },
-    "Old Faith" : {
-        "XP Cost" : 0,
-        "Foundation" : "Spontaneity",
-        "Pillars" : [
-            "Autumn",
-            "Spring",
-            "Summer",
-            "Winter"
-        ] 
-    },
-    "Order of Hermes" : {
-        "XP Cost" : 0,
-        "Foundation" : "Modus",
-        "Pillars" : [
-            "Anima",
-            "Corona",
-            "Primus",
-            "Vires"
-        ] 
-    },
-    "Spirit Talker" : {
-        "XP Cost" : 0,
-        "Foundation" : "Sensitivity",
-        "Pillars" : [
-            "Chieftain",
-            "Trickster",
-            "Warrior",
-            "Wise One"
-        ] 
-    },
-    "Valdaerman" : {
-        "XP Cost" : 0,
-        "Foundation" : "Blot",
-        "Pillars" : [
-            "Fara",
-            "Forlog",
-            "Galdar",
-            "Hjaldar"
-        ] 
-    },
-    "Veneficti" : {
-        "XP Cost" : 10,
-        "Foundation" : "Sin",
-        "Pillars" : [
-            "Abomination",
-            "Subversion",
-            "Malediction",
-            "Diabolism"
-        ] 
-    },
-]
-
-"Vampire" : {
-    "Disciplines" : [
-        "Animalism",
-        "Auspex",
-        "Celerity",
-        "Chimerstry",
-        "Daimoinion",
-        "Dementation",
-        "Dominate",
-        "Fortitude",
-        "Mortis - Grave's Decay",
-        "Mortis - Corpse in the Monster",
-        "Mortis - Cadaverous Animation",
-        "Obfuscate",
-        "Obtenebration",
-        "Potence",
-        "Presence",
-        "Protean",
-        "Quietus",
-        "Serpentis",
-        "Valeren Healing",
-        "Valeren Warrior",
-        "Vicissitude"
-    ],
-    "Clans" : [
-        "Brujah" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Cannot resist the Force Passion power and are immune to the End Frenzy power.",
-            "Innate Disciplines" : [
-                "Celerity",
-                "Potence",
-                "Presence",
-            ]
+    "Garou" : {
+        "Breed" : {
+            "Homid" : {
+                "Gnosis" : 2,
+                "Revert" : "Homid",
+                "Weaknesses" : "None",
+                "Benefits" : "Do not take Aggravated damage from silver in Homid form, Can carry 2 silver items without reducing their Gnosis pool."
+            },
+            "Metis" : {
+                "Gnosis" : 3,
+                "Revert" : "Crinos",
+                "Weaknesses" : "Capped Renown - Cliath (unless Black Spiral Dancer), All Metis must have a physical deformity as a makeup requirement.",
+                "Benefits" : "No Frenzy due to Duration of Crinos, Learn and use any Metis Gift regardless of rank."
+            },        
+            "Lupus" : {
+                "Gnosis" : 4,
+                "Revert" : "Homid",
+                "Weaknesses" : "None",
+                "Benefits" : "None"
+            }
         },
-        "Cappadocian" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Guise of Death. The Cappadacian must apply pale, corpse-like makeup to their face.",
-            "Innate Disciplines" : [
-                "Auspex",
-                "Fortitude",
-                "Mortis - Grave's Decay",
-                "Mortis - Corpse in the Monster",
-                "Mortis - Cadaverous Animation",
-            ]
-        },    
-        "Lasombra" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Suffer greater damage from the sun. Take 2 Aggravated Damage from the Sun every minute of exposure. Reflection aversion. If you see a reflection of yourself you must move so you can no longer see it.",
-            "Innate Disciplines" : [
-                "Dominate",
-                "Obtenebration",
-                "Potence",
-            ]
+        "Auspice" : {
+            "Ragabash" : {
+                "Renown Order" : "None",
+                "Renown Modification" : "2 more total renown to gain rank than other Auspices.",
+                "Rage" : 1,
+                "Starting Rite" : "Choice of 1 Dot Rite."
+            },
+            "Theurge" : {
+                "Renown Order" : "Wisdom, Glory, Honor",
+                "Renown Modification" : "None",
+                "Rage" : 2,
+                "Starting Rite" : "Summon Spirit"
+            },
+            "Philodox" : {
+                "Renown Order" : "Honor, Wisdom, Glory",
+                "Renown Modification" : "None",
+                "Rage" : 3,
+                "Starting Rite" : "Rite of Punishment"
+            },
+            "Galliard" : {
+                "Renown Order" : "Glory, Wisdom, Honor",
+                "Renown Modification" : "None",
+                "Rage" : 4,
+                "Starting Rite" : "Right of Accomplishment"
+            },
+            "Ahroun" : {
+                "Renown Order" : "Glory, Honor, Wisdom",
+                "Renown Modification" : "None",
+                "Rage" : 5,
+                "Starting Rite" : "None"
+            }
         },
-        "Toreador" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "When in the presence of something the Toreador finds beautiful they become fascinated and distracted. Watching the thing for at least 1 minute. Nothing can break this trance except being attacked and then only if the Toreador spends a Willpower point",
-            "Innate Disciplines" : [
-                "Auspex",
-                "Celerity",
-                "Presence",
-            ]
+        "Tribe" : {
+            "Black Fury" : {
+                "XP Cost" : 0,
+                "Special Rules" : "Females only."
+            },
+            "Bone Gnawer" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Children of Gaia" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Fenrir" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Fianna" : {
+                "XP Cost" : 4,
+                "Special Rules" : "None"
+            },
+            "Red Talon" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Shadow Lord" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Silver Fang" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Silent Strider" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Warder of Man" : {
+                "XP Cost" : 0,
+                "Special Rules" : "None"
+            },
+            "Black Spiral Dancer" : {
+                "XP Cost" : 4,
+                "Special Rules" : "Add Permanently Tainted Merit."
+            },
+            "Corax" : {
+                "XP Cost" : 3,
+                "Special Rules" : "Replace Weakness Silver with Weakness Gold, No Metis, No Auspice - Corax have Ragabash as Innate Power tree, When in Crinos form use a Raven mask instead of a Wolf Mask."
+            }    
         },
-        "Tzimisce" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "At character creation the Tzimizce is given 4 dirt tags which must be attached to pouches of dirt. They must sleep with at least 2 of these pouches visible in game space around where they rest. Failure to sleep surrounded by these dirt tags results in the Tzimisce being unable to spend blood until they are able to sleep 5 continuous hours surrounded by them.",
-            "Innate Disciplines" : [
-                "Animalism",
-                "Auspex",
-                "Vicissitude",
-            ]
-        },    
-        "Ventrue" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Can only drink the blood of a selected group of mortals. Choose a category that roughly cuts the game population in half. The restriction can be more, but not less, narrow. Categories such as gender, hair color, religion, or tradecraft are typical. While they can bite and drink from mortals not part of their category they gain no Blood from it. This feeding restriction doesn’t apply to vampires and a Venture can drink from any vampire whether they are part of their selected group or not.",
-            "Innate Disciplines" : [
-                "Dominate",
-                "Fortitude",
-                "Presence",
-            ]
-        },
-        "Salubri (Healer)" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Must spend a Willpower Point to take an action that causes damage to another character. Exception - A person willing to be bitten and fed from.",
-            "Innate Disciplines" : [
-                "Auspex",
-                "Fortitude",
-                "Valeren Healing",
-            ]
-        },
-        "Salubri (Warrior)" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Must spend a Willpower Point to refuse a request to aid someone in need. This applies once per day per person in need.",
-            "Innate Disciplines" : [
-                "Auspex",
-                "Fortitude",
-                "Valeren Warrior",
-            ]
-        },    
-        "Assamite" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Always answers yes to Sense Amaranth.",
-            "Innate Disciplines" : [
-                "Celerity",
-                "Obfuscate",
-                "Quietus",
-            ]
-        },
-        "Followers of Set" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Followers of Set take damage from sunlight even if fully covered and cannot convert aggravated damage from sunlight or Light element to Regular damage by any means.",
-            "Innate Disciplines" : [
-                "Obfuscate",
-                "Presence",
-                "Serpentis",
-            ]
-        },
-        "Gangrel" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Every time a Gangrel frenzies for any reason other than being targeted by the Frenzy power, the player must come to the next game with a new animal feature as a makeup requirement for the character. Common features are fur, unretractable fangs, slitted eyes, scales, claws and tails but are not limited to this. This can be limited to a max of 5 features if the player wishes.",
-            "Innate Disciplines" : [
-                "Animalism",
-                "Fortitude",
-                "Protean",
-            ]
-        },    
-        "Malkavian" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Malkavians suffer under the maddening truth given to their progenitor. They are Immune to Remove Mental and must choose 6 Cannot resist: Confusion, Distract, Feral Mind, Force Passion, Force Sin, Force Truth, Hallucinate, Madness, Nightmare, Paranoia, Remove Memory, Sleep, Summon, Telepathic Command.",
-            "Innate Disciplines" : [
-                "Auspex",
-                "Dementation",
-                "Obfuscate",
-            ]
-        },
-        "Nosferatu" : {
-            "XP Cost" : 0,
-            "Clan Flaw" : "Disturbing Presence and must wear obviously disfigured and inhuman makeup/props/costumes. No powers can remove these features outside of their own Obfuscate and no powers can remove their Disturbing Presence.",
-            "Innate Disciplines" : [
-                "Animalism",
-                "Obfuscate",
-                "Potence",
-            ]
-        },
-        "Baali" : {
-            "XP Cost" : 10,
-            "Clan Flaw" : "A holy symbol brandished at a Baali and the higher powers invoked prevent them from approaching and they cannot enter holy ground *the town church*. Examples of holy symbols are the Christian Cross, The Star of David, Chants from the Qur’an or a Thor’s Hammer pendant.",
-            "Innate Disciplines" : [
-                "Daimoinion",
-                "Obfuscate",
-                "Presence",
-            ]
-        },    
-    ]
-}
-
-"Fae" : {
-    "Origin" : [
-        "Changeling" : [
-            "Mists" : 2,
-            "Weaving" : 4,
-            "Dominion_Dots" : 2,
-            "Birthright" : "Treat Echoes as one step lower for Changelings. This means that they are not affected by Visible echoes and treat Presence as Visible, Directed as Presence and Called Out as Directed.",
-            "Weakness" : "Start with 1 less dot in Dominions (accounted above) and cannot use Unleashings while not in their Fae Mien."
-        ],
-        "Firstborn" : [
-            "Mists" : 4,
-            "Weaving" : 2,
-            "Dominion_Dots" : 3,
-            "Birthright" : "Firstborn have an easier time Unleashing. If the Unleashing is not resisted the Fae regains 1 Mist Point spent to Unleash the power after 1 minute.",
-            "Weakness" : "The First Born are more susceptible to their Echoes than other Fae. Treat any Echo encountered as 1 step more severe."
-        ],
-        "Inanime" : [
-            "Mists" : 3,
-            "Weaving" : 3,
-            "Dominion_Dots" : 2,
-            "Birthright" : "Elemental attunement, Elemental Discorpoation, 2 Greater Traits, No Blood - Immune to Drinking (No Blood Points; Still take 1 Aggravated Damage).",
-            "Weakness" : "Disturbing Presence. Must always use the same Human form and spend 10 minutes roleplaying remodeling their bodies to change to their Human Mien"
-        ],
-    ],
-    "Court" : [
-        "Spring" : [
-            "Element" : "Earth",
-            "Favored Dominion" : "Dawn",
-            "Weakness" : "None",
-        ],
-        "Summer" : [
-            "Element" : "Fire",
-            "Favored Dominion" : "Day",
-            "Weakness" : "None",
-        ],
-        "Autumn" : [
-            "Element" : "Spark",
-            "Favored Dominion" : "Dusk",
-            "Weakness" : "None",
-        ],    
-        "Winter" : [
-            "Element" : "Ice",
-            "Favored Dominion" : "Night",
-            "Weakness" : "None",
-        ],
-        "Solstice" : [
-            "Element" : "Any",
-            "Favored Dominion" : "None",
-            "Weakness" : "Can craft oaths equal to half that allowed by their Weaving and Gramyre rounded down",
-        ],
-    ],
-    "Gramarye" : [
-        "Oaths",
-        "Powders",
-        "Treasures",
-    ]
-}
-
-"Human" : {
-    "Subfaction" : [
-        "Commoner" : [
-            "XP Cost" : 0,
-            "Aligned Faction" : "None",
-            "Powers" : "None",
-            "Energy" : "None",
-            "Benefits" : "Oaths, Quick to Learn, Additional skill dot (max rank 4) at creation, 6 additional Commodity Tags of your choice as creation.",
-            "Weaknesses" : "The Delirium, The Curse",
-        ],
-        "Ghoul" : [
-            "XP Cost" : 2,
-            "Aligned Faction" : "Vampire",
-            "Powers" : "Disciplines",
-            "Energy" : "Blood",
-            "Benefits" : "Oaths, Quick to Learn, Blood Boosting",
-            "Weaknesses" : "The Delirium, The Curse, Blood Dependence",
-        ],
-        "Kinfolk" : [
-            "XP Cost" : 2,
-            "Aligned Faction" : "Garou",
-            "Powers" : "None",
-            "Energy" : "None",
-            "Benefits" : "Oaths, Quick to Learn, Immune to Delirium",
-            "Weaknesses" : "",
-        ],
-        "Gifted Kinfolk" : [
-            "XP Cost" : 4,
-            "Aligned Faction" : "Garou",
-            "Powers" : "Gifts",
-            "Energy" : "Gnosis",
-            "Benefits" : "Oaths, Quick to Learn, Immune to Delirium",
-            "Weaknesses" : "The Curse",
-        ],
-    ],
-}
-
-"Garou" : {
-    "Breed" : [
-        "Homid" : [
-            "Gnosis" : 2,
-            "Revert" : "Homid",
-            "Weaknesses" : "None",
-            "Benefits" : "Do not take Aggravated damage from silver in Homid form, Can carry 2 silver items without reducing their Gnosis pool.",
-        ],
-        "Metis" : [
-            "Gnosis" : 3,
-            "Revert" : "Crinos",
-            "Weaknesses" : "Capped Renown - Cliath (unless Black Spiral Dancer), All Metis must have a physical deformity as a makeup requirement.",
-            "Benefits" : "No Frenzy due to Duration of Crinos, Learn and use any Metis Gift regardless of rank.",
-        ],        
-        "Lupus" : [
-            "Gnosis" : 4,
-            "Revert" : "Homid",
-            "Weaknesses" : "None",
-            "Benefits" : "None",
-        ],
-    ],
-    "Auspice" : [
-        "Ragabash" : [
-            "Renown Order" : "None",
-            "Renown Modification" : "2 more total renown to gain rank than other Auspices.",
-            "Rage" : 1,
-            "Starting Rite" : "Choice of 1 Dot Rite.",
-        ],
-        "Theurge" : [
-            "Renown Order" : "Wisdom, Glory, Honor",
-            "Renown Modification" : "None",
-            "Rage" : 2,
-            "Starting Rite" : "Summon Spirit",
-        ],
-        "Philodox" : [
-            "Renown Order" : "Honor, Wisdom, Glory",
-            "Renown Modification" : "None",
-            "Rage" : 3,
-            "Starting Rite" : "Rite of Punishment",
-        ],
-        "Galliard" : [
-            "Renown Order" : "Glory, Wisdom, Honor",
-            "Renown Modification" : "None",
-            "Rage" : 4,
-            "Starting Rite" : "Right of Accomplishment",
-        ],
-        "Ahroun" : [
-            "Renown Order" : "Glory, Honor, Wisdom",
-            "Renown Modification" : "None",
-            "Rage" : 5,
-            "Starting Rite" : "None",
-        ],
-    ],
-    "Tribe" : [
-        "Black Fury" : [
-            "XP Cost" : 0,
-            "Special Rules" : "Females only.",
-        ],
-        "Bone Gnawer" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Children of Gaia" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Fenrir" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Fianna" : [
-            "XP Cost" : 4,
-            "Special Rules" : "None",
-        ],
-        "Red Talon" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Shadow Lord" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Silver Fang" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Silent Strider" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Warder of Man" : [
-            "XP Cost" : 0,
-            "Special Rules" : "None",
-        ],
-        "Black Spiral Dancer" : [
-            "XP Cost" : 4,
-            "Special Rules" : "Add Permanently Tainted Merit.",
-        ],
-        "Corax" : [
-            "XP Cost" : 3,
-            "Special Rules" : "Replace Weakness Silver with Weakness Gold, No Metis, No Auspice - Corax have Ragabash as Innate Power tree, When in Crinos form use a Raven mask instead of a Wolf Mask.",
-        ],    
-    ],
-    "Ranks" : [
-        "Unranked" : [
-            "Max Gift Level" : 0,
-            "Renown Required" : 0,
-        ],
-        "Cliath" : [
-            "Max Gift Level" : 1,
-            "Renown Required" : 3,
-        ],        
-        "Fostern" : [
-            "Max Gift Level" : 2,
-            "Renown Required" : 6,
-        ],
-        "Adren" : [
-            "Max Gift Level" : 3,
-            "Renown Required" : 10,
-        ],
-        "Athro" : [
-            "Max Gift Level" : 4,
-            "Renown Required" : 15,
-        ],        
-        "Elder" : [
-            "Max Gift Level" : 4,
-            "Renown Required" : 23,
-        ],
-    ]
+        "Ranks" : {
+            "Unranked" : {
+                "Max Gift Level" : 0,
+                "Renown Required" : 0
+            },
+            "Cliath" : {
+                "Max Gift Level" : 1,
+                "Renown Required" : 3
+            },        
+            "Fostern" : {
+                "Max Gift Level" : 2,
+                "Renown Required" : 6
+            },
+            "Adren" : {
+                "Max Gift Level" : 3,
+                "Renown Required" : 10
+            },
+            "Athro" : {
+                "Max Gift Level" : 4,
+                "Renown Required" : 15
+            },        
+            "Elder" : {
+                "Max Gift Level" : 4,
+                "Renown Required" : 23
+            }
+        }
+    }
 }
