@@ -63,6 +63,8 @@ skills_dict = {
 base_x = 20
 base_y = 750
 
+factions = open(os.path.join(os.path.dirname(__file__),'data','subfaction_data.json'),"r")
+
 def borders(my_canvas,base_x,base_y):
     my_canvas.line(base_x, base_y-70, base_x+560, base_y-70)
     my_canvas.line(base_x, base_y-310, base_x+560, base_y-310)
@@ -180,6 +182,7 @@ def power_block(my_canvas,x,y):
         my_canvas.drawString(power_x+170, power_y+42, "Font: ")
         font_rank_assessment(power_x+250,power_y+45)
         my_canvas.drawString(power_x+190, power_y+15, "Foundation & Pillars")
+        # https://stackoverflow.com/questions/11197818/how-do-i-make-a-json-object-with-multiple-arrays
         for n in trees_dict:
             if n['Subfaction'] == subfaction:
                 trees_list.append(n['TreeName'])
