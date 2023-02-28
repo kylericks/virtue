@@ -81,9 +81,9 @@
             "Dementation",
             "Dominate",
             "Fortitude",
-            "Mortis - Grave's Decay",
-            "Mortis - Corpse in the Monster",
-            "Mortis - Cadaverous Animation",
+            "Mortis: Grave's Decay",
+            "Mortis: Corpse in the Monster",
+            "Mortis: Cadaverous Animation",
             "Obfuscate",
             "Obtenebration",
             "Potence",
@@ -91,8 +91,8 @@
             "Protean",
             "Quietus",
             "Serpentis",
-            "Valeren Healing",
-            "Valeren Warrior",
+            "Valeren (Healing)",
+            "Valeren (Warrior)",
             "Vicissitude"
         ],
         "Clans" : {
@@ -111,9 +111,9 @@
                 "Innate Disciplines" : [
                     "Auspex",
                     "Fortitude",
-                    "Mortis - Grave's Decay",
-                    "Mortis - Corpse in the Monster",
-                    "Mortis - Cadaverous Animation"
+                    "Mortis: Grave's Decay",
+                    "Mortis: Corpse in the Monster",
+                    "Mortis: Cadaverous Animation"
                 ]
             },    
             "Lasombra" : {
@@ -158,7 +158,7 @@
                 "Innate Disciplines" : [
                     "Auspex",
                     "Fortitude",
-                    "Valeren Healing"
+                    "Valeren (Healing)"
                 ]
             },
             "Salubri (Warrior)" : {
@@ -167,7 +167,7 @@
                 "Innate Disciplines" : [
                     "Auspex",
                     "Fortitude",
-                    "Valeren Warrior"
+                    "Valeren (Warrior)"
                 ]
             },    
             "Assamite" : {
@@ -224,6 +224,13 @@
                     "Presence"
                 ]
             }    
+        },
+        "Roads" : {
+            "Humanity" : "Count as Human for Fae Oath.",
+            "Kings" : "Gain: Cost: 1 Blood Point. Iron Will to Command and False Will from Characters that are not in a position of authority over you.",
+            "Beast" : "Do not lose Road rating for entering a Frenzy.",
+            "Sin" : "Gain: Cost: 1 Blood Point. Force Sin",
+            "Heaven" : ": Immune to Corruption. Special: If Road Rating is 10: No longer take exposure damage from sunlight. If Lasombra take 1 damage instead of 2."
         }
     },
     "Fae" : {
