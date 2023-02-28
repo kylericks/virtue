@@ -1,17 +1,19 @@
 # Imports
+from re import X
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from reportlab.lib.styles import ParagraphStyle
 import json
 import csv
 import os
+import textwrap
 
 # Variables for Testing
 pc_name = " "
 player_name = " "
 xp_total = str()
 faction = "Vampire"
-subfaction = "Nosferatu"
+subfaction = "Cappadocian"
 energy_type = str()
 health = str()
 willpower = str()
@@ -256,6 +258,61 @@ def font_rank_assessment(x,y):
         font_temp -= 1
         font_x = font_x+15
 
+def vampire_conditionals(b_x,b_y):
+    x = b_x
+    y = b_y-160
+
+    box_wrap = textwrap.TextWrapper(width = 50)
+    clan_flaw = box_wrap.wrap(factions[faction]["Clans"][subfaction]["Clan Flaw"])
+    road_aura = box_wrap.wrap(factions[faction]["Roads"][road])
+
+    if subfaction == "Cappadocian":
+        flaw_y = y+170
+    else:
+        flaw_y = y+210
+    my_canvas.drawString(base_x+100, flaw_y, "Clan Weakness")
+    flaw_y = flaw_y-20
+    for line in clan_flaw:
+        my_canvas.drawString(base_x, flaw_y, line)
+        flaw_y = flaw_y-15
+    flaw_y = flaw_y-20
+    my_canvas.drawString(base_x+100, flaw_y, "Road Aura (7+):")
+    flaw_y = flaw_y-20
+    for line in road_aura:
+        my_canvas.drawString(base_x, flaw_y, line)
+        flaw_y = flaw_y-15
+    my_canvas.line(base_x, flaw_y, base_x+320, flaw_y)
+
+def rotes_block(my_canvas,x,y):
+    rotes_x = x+330
+    rotes_y = y-90
+    rotes = 10
+
+    my_canvas.drawString(rotes_x+85, rotes_y, "Rotes")
+    while rotes > 0:
+        my_canvas.line(rotes_x, rotes_y-20, rotes_x+230, rotes_y-20)
+        rotes = rotes-1
+        rotes_y = rotes_y-20
+    my_canvas.line(base_x+320, base_y-310, base_x+570, base_y-310)
+
+def devotions_block(my_canvas,x,y):
+    devotions = 13
+    if subfaction == "Cappadocian":
+        x = x+85
+        y = y-10
+        my_canvas.line(base_x+320, base_y-340, base_x+570, base_y-340)
+    else:
+        x = x+85
+        y = y-30
+        my_canvas.line(base_x+320, base_y-395, base_x+570, base_y-395)
+        y = y-10
+    my_canvas.drawString(x, y, "Devotions")
+    while devotions > 0:
+        my_canvas.line(x-85, y-20, x+160, y-20)
+        devotions = devotions-1
+        y = y-20
+    my_canvas.line(x-95, y+290, x-95, y-50)
+
 def power_block(my_canvas,x,y):
     power_x = x
     power_y = y-160
@@ -272,8 +329,6 @@ def power_block(my_canvas,x,y):
         my_canvas.drawString(power_x+170, power_y+57, "Generation: "+str(generation))
         my_canvas.drawString(power_x+170, power_y+42, "Max Vitae per Second: "+str(vps))
         my_canvas.drawString(power_x+170, power_y+27, "Road of "+road+" : "+str(road_rank))
-        #my_canvas.drawString(power_x+200, power_y+12, "Road Aura (7+):")
-        #my_canvas.drawString(power_x+170, power_y-3, factions[faction]["Roads"][road])
         my_canvas.line(base_x+160, base_y-140, base_x+320, base_y-140)
         my_canvas.drawString(power_x+190, power_y+2, "Innate Disciplines")
         power_y = power_y-15
@@ -295,13 +350,11 @@ def power_block(my_canvas,x,y):
         if has_innate_mortis == 1:
             power_y = power_y-10
             my_canvas.drawString(power_x+220, power_y, "Mortis")
-            print(paths)
             for p in paths:
                 power_y = power_y-15
                 my_canvas.drawString(power_x+170, power_y, p)
                 power_y = power_y-15
                 powers_rank_assessment("Mortis: "+p,power_x,power_y)
-        
         power_x = x+330
         power_y = y-90
         my_canvas.drawString(power_x+85, power_y, "Disciplines")
@@ -327,11 +380,11 @@ def power_block(my_canvas,x,y):
                 power_y = power_y-15
                 my_canvas.drawString(power_x, power_y, p)
                 powers_rank_assessment("Mortis: "+p,power_x-80,power_y)    
-        my_canvas.line(base_x+320, base_y-395, base_x+570, base_y-395)
         my_canvas.line(base_x+320, base_y-310, base_x+320, base_y-395)
-
-
-  
+        vampire_conditionals(power_x,power_y)
+        devotions_x = power_x
+        devotions_y = power_y
+        devotions_block(my_canvas,devotions_x,devotions_y)
     elif faction == "Mage":
         my_canvas.drawString(power_x+210, power_y+72, "Magic Skills")
         my_canvas.drawString(power_x+170, power_y+57, "Awareness: ")
@@ -349,24 +402,11 @@ def power_block(my_canvas,x,y):
             my_canvas.drawString(power_x+190, power_y-15, "Foci :")
             my_canvas.line(power_x+190, power_y-17, power_x+315, power_y-17)
             power_y = power_y-30
+        rotes_block(my_canvas,base_x,base_y)
     elif faction == "Fae":
         pass
     else:
         my_canvas.drawString(base_x+170, base_y-90, "Invalid Faction.  Get it together "+player_name)
-
-
-def rotes_block(my_canvas,x,y):
-    rotes_x = x+330
-    rotes_y = y-90
-    rotes = 10
-
-    my_canvas.drawString(rotes_x+85, rotes_y, "Rotes")
-    while rotes > 0:
-        my_canvas.line(rotes_x, rotes_y-20, rotes_x+230, rotes_y-20)
-        rotes = rotes-1
-        rotes_y = rotes_y-20
-
-    my_canvas.line(base_x+320, base_y-310, base_x+570, base_y-310)
 
 if __name__ == '__main__':
     my_canvas = canvas.Canvas("sample_sheet.pdf",pagesize=letter)
@@ -374,6 +414,4 @@ if __name__ == '__main__':
     header_block(my_canvas,base_x,base_y)
     skills_block(my_canvas,base_x,base_y)
     power_block(my_canvas,base_x,base_y)
-    if faction == "Mage":
-        rotes_block(my_canvas,base_x,base_y)
     my_canvas.save()
