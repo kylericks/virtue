@@ -326,10 +326,9 @@ def power_block(my_canvas,x,y):
             for p in paths:
                 power_y = power_y-15
                 my_canvas.drawString(power_x, power_y, p)
-                power_y = power_y-15
                 powers_rank_assessment("Mortis: "+p,power_x-80,power_y)    
-        my_canvas.line(base_x+320, base_y-440, base_x+570, base_y-440)
-        my_canvas.line(base_x+320, base_y-310, base_x+320, base_y-440)
+        my_canvas.line(base_x+320, base_y-395, base_x+570, base_y-395)
+        my_canvas.line(base_x+320, base_y-310, base_x+320, base_y-395)
 
 
   
