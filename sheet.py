@@ -12,8 +12,8 @@ import textwrap
 pc_name = " "
 player_name = " "
 xp_total = str()
-faction = "Vampire"
-subfaction = "Cappadocian"
+faction = "Fae"
+subfaction = "Changeling"
 energy_type = str()
 health = str()
 willpower = str()
@@ -24,6 +24,16 @@ generation = 10
 road = "Kings"
 road_rank = 4
 vps = 1
+mists = int()
+weaving = int()
+court = "Winter"
+oath_pool = int()
+max_oaths = int()
+oath_power = str()
+enigmas = 0
+ken = 1
+gram = 0
+gramarye_specialty = "Powders"
 pc_skills = {
     "alch": 0,
     "arch": 0,
@@ -140,6 +150,12 @@ def vitae_pool():
 def determine_energy():
     global energy_type
     global energy_pool
+    global mists
+    global weaving
+    global ken
+    global gram
+    global enigmas
+
     if faction == "Human":
         if subfaction == "Ghoul":
             energy_type = "Vitae"
@@ -155,7 +171,8 @@ def determine_energy():
         energy_type = "Quintessence"
         energy_pool = 10+(font*2)
     elif faction == "Fae":
-        pass
+        mists = factions[faction]["Origin"][subfaction]["Mists"]
+        weaving = factions[faction]["Origin"][subfaction]["Weaving"]
     else:
         my_canvas.drawString(base_x+170, base_y-90, "Get it together "+player_name)
 
@@ -167,10 +184,16 @@ def header_block(my_canvas,base_x,base_y):
     my_canvas.drawString(base_x, base_y-40, "Player Name: "+player_name)
     my_canvas.drawString(base_x+200, base_y-40, "Sub-Faction:   "+subfaction)
     my_canvas.drawString(base_x+400, base_y-40, "Willpower:     "+str(willpower))
-    my_canvas.drawString(base_x, base_y-55, "XP Total:        "+str(xp_total))    
-    determine_energy()
-    my_canvas.drawString(base_x+200, base_y-55, "Energy Type:  "+str(energy_type))        
-    my_canvas.drawString(base_x+400, base_y-55, "Energy Pool: "+str(energy_pool))       
+    if faction == "Fae":
+        my_canvas.drawString(base_x, base_y-55, "XP Total:        "+str(xp_total))    
+        determine_energy()
+        my_canvas.drawString(base_x+200, base_y-55, "Mists:              "+str(mists))        
+        my_canvas.drawString(base_x+400, base_y-55, "Weaving:   "+str(weaving))  
+    else:
+        my_canvas.drawString(base_x, base_y-55, "XP Total:        "+str(xp_total))    
+        determine_energy()
+        my_canvas.drawString(base_x+200, base_y-55, "Energy Type:  "+str(energy_type))        
+        my_canvas.drawString(base_x+400, base_y-55, "Energy Pool: "+str(energy_pool))       
 
 def trade_specialization(name,x,y):
     if name == "Trade":
@@ -228,20 +251,20 @@ def powers_rank_assessment(ability,x,y):
             power_rank -= 1
             powers_x = powers_x+15
 
-def awareness_rank_assessment(x,y):
+def faction_skill_assessment(skill,x,y):
     dots = 0
-    awareness_x = x
-    awareness_y = y
-    awareness_temp = awareness
+    skill_x = x
+    skill_y = y
+    skill_temp = skill
 
     while dots <= 3:
-        if awareness_temp >= 1:
-            my_canvas.circle(awareness_x, awareness_y, 5, fill=1)
+        if skill_temp >= 1:
+            my_canvas.circle(skill_x, skill_y, 5, fill=1)
         else:
-            my_canvas.circle(awareness_x, awareness_y, 5, fill=0)
+            my_canvas.circle(skill_x, skill_y, 5, fill=0)
         dots += 1
-        awareness_temp -= 1
-        awareness_x = awareness_x+15
+        skill_temp -= 1
+        skill_x = skill_x+15
 
 def font_rank_assessment(x,y):
     dots = 0
@@ -375,7 +398,6 @@ def power_block(my_canvas,x,y):
         if has_mortis == 1:
             power_y = power_y-10
             my_canvas.drawString(power_x+90, power_y, "Mortis")
-            print(paths)
             for p in paths:
                 power_y = power_y-15
                 my_canvas.drawString(power_x, power_y, p)
@@ -388,7 +410,7 @@ def power_block(my_canvas,x,y):
     elif faction == "Mage":
         my_canvas.drawString(power_x+210, power_y+72, "Magic Skills")
         my_canvas.drawString(power_x+170, power_y+57, "Awareness: ")
-        awareness_rank_assessment(power_x+250,power_y+60)
+        faction_skill_assessment(awareness,power_x+250,power_y+60)
         my_canvas.drawString(power_x+170, power_y+42, "Font: ")
         font_rank_assessment(power_x+250,power_y+45)
         my_canvas.line(base_x+160, base_y-130, base_x+320, base_y-130)
@@ -404,7 +426,47 @@ def power_block(my_canvas,x,y):
             power_y = power_y-30
         rotes_block(my_canvas,base_x,base_y)
     elif faction == "Fae":
-        pass
+        traits_x = power_x+200
+        traits_y = power_y+72
+        mtraits = 5
+        echoes = 6
+        
+        #traits block
+        my_canvas.drawString(traits_x, traits_y, "Major Traits")
+        while mtraits > 0:
+            traits_y -= 15
+            my_canvas.line(traits_x-30, traits_y, traits_x+110, traits_y)
+            mtraits -= 1
+        traits_y -= 15
+        my_canvas.line(traits_x-40, traits_y, traits_x+120, traits_y)
+        traits_y -= 20
+        my_canvas.drawString(traits_x+10, traits_y, "Echoes")
+        while echoes > 0:
+            traits_y -= 15
+            my_canvas.line(traits_x-30, traits_y, traits_x+110, traits_y)
+            echoes -= 1
+        
+        #fae skills block
+        fae_skills_x = power_x+390
+        fae_skills_y = power_y+72
+
+        my_canvas.drawString(fae_skills_x, fae_skills_y, "Fae Skills")
+        fae_skills_y -= 15
+        my_canvas.drawString(fae_skills_x-60, fae_skills_y, "Kenning:")
+        faction_skill_assessment(ken,fae_skills_x+60, fae_skills_y)
+        fae_skills_y -= 15
+        my_canvas.drawString(fae_skills_x-60, fae_skills_y, "Enigmas:")
+        faction_skill_assessment(enigmas,fae_skills_x+60, fae_skills_y)
+        fae_skills_y -= 15
+        my_canvas.drawString(fae_skills_x-60, fae_skills_y, "Gramarye: "+gramarye_specialty)
+        faction_skill_assessment(gram,fae_skills_x+60, fae_skills_y)
+        fae_skills_y -= 15
+        my_canvas.line(fae_skills_x-70, fae_skills_y, fae_skills_x+180, fae_skills_y)
+        fae_skills_y -= 20
+        my_canvas.drawString(fae_skills_x, fae_skills_y, "Oath Pool")
+
+
+
     else:
         my_canvas.drawString(base_x+170, base_y-90, "Invalid Faction.  Get it together "+player_name)
 
