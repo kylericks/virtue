@@ -12,8 +12,8 @@ import textwrap
 pc_name = " "
 player_name = " "
 xp_total = str()
-faction = "Fae"
-subfaction = "Changeling"
+faction = "Human"
+subfaction = "Commoner"
 energy_type = str()
 health = str()
 willpower = str()
@@ -32,8 +32,8 @@ max_oaths = int()
 oath_power = str()
 enigmas = 0
 ken = 1
-gram = 0
-gramarye_specialty = "Powders"
+gram = 4
+gramarye_specialty = "Oaths"
 pc_skills = {
     "alch": 0,
     "arch": 0,
@@ -52,6 +52,13 @@ pc_skills = {
     "trade_specialty": " "
 }
 
+pc_trees = {
+    "Dawn":1,
+    "Day":0,
+    "Dusk":2,
+    "Night":3
+}
+'''
 pc_trees = {
     "Animalism":1,
     "Auspex":0,
@@ -75,7 +82,7 @@ pc_trees = {
     "Valeren (Warrior)":0,
     "Vicissitude":0
 }
-'''
+
 pc_trees = {
     "Blot":1,
     "Fara":0,
@@ -163,7 +170,8 @@ def determine_energy():
         elif subfaction == "Gifted Kinfolk":
             pass
         else:
-            pass
+            energy_type = "None"
+            energy_pool = "None"
     elif faction == "Vampire":
         energy_type = "Vitae"
         vitae_pool()
@@ -336,6 +344,100 @@ def devotions_block(my_canvas,x,y):
         y = y-20
     my_canvas.line(x-95, y+290, x-95, y-50)
 
+def fae_oaths(x,y):
+    global max_oaths
+
+    stone_oaths = 0
+
+    if gramarye_specialty == "Oaths":
+        if gram <= 0:
+            if court == "Solstice":
+                max_oaths = 1
+            else:
+                max_oaths = 2
+        elif gram == 1:
+            if court == "Solstice":
+                max_oaths = 2
+            else:
+                max_oaths = 4
+        elif gram == 2:
+            stone_oaths = 1
+            if court == "Solstice":
+                max_oaths = 3
+            else:
+                max_oaths = 6
+        elif gram == 3:
+            stone_oaths = 3
+            if court == "Solstice":
+                max_oaths = 4
+            else:
+                max_oaths = 8
+        elif gram == 4:
+            stone_oaths = 4
+            if court == "Solstice":
+                max_oaths = 5
+            else:
+                max_oaths = 9       
+    else:
+        if gram <= 0:
+            if court == "Solstice":
+                max_oaths = 1
+            else:
+                max_oaths = 2
+        elif gram == 1:
+            if court == "Solstice":
+                max_oaths = 2
+            else:
+                max_oaths = 4
+        elif gram == 2:
+            if court == "Solstice":
+                max_oaths = 3
+            else:
+                max_oaths = 6
+        elif gram == 3:
+            stone_oaths = 1
+            if court == "Solstice":
+                max_oaths = 4
+            else:
+                max_oaths = 8
+        elif gram == 4:
+            stone_oaths = 2
+            if court == "Solstice":
+                max_oaths = 5
+            else:
+                max_oaths = 9
+
+    my_canvas.drawString(x+60, y, "Oath Pool")
+    y -= 27
+    my_canvas.drawString(x, y, "Oaths:")
+    my_canvas.drawString(x+110, y, "Max Oaths: "+str(max_oaths))
+    y -= 15
+    if gramarye_specialty == "Oaths": 
+        if gram == 4:
+            my_canvas.drawString(x, y, "Stone Oaths:")
+            my_canvas.drawString(x+110, y, "Stone Oaths Pool: "+str(stone_oaths))
+            y -= 15
+            my_canvas.drawString(x, y, "Can be an Oath Steward (Iron)")
+            y -= 15
+            my_canvas.drawString(x, y, "Can be an Oath Steward for 1 Stone")
+            y -= 15
+        elif gram >= 2:
+            my_canvas.drawString(x, y, "Stone Oaths:")
+            my_canvas.drawString(x, y, "Stone Oaths Pool: "+str(stone_oaths))
+            y -= 15
+            my_canvas.drawString(x, y, "Can be an Oath Steward (Iron)")
+            y -= 15
+        elif gram == 1:
+            my_canvas.drawString(x, y, "Can be an Oath Steward (Iron)")
+            y -= 15
+        else:
+            pass
+    else:
+        pass
+    my_canvas.line(x-10, y, x+240, y)
+
+    
+
 def power_block(my_canvas,x,y):
     power_x = x
     power_y = y-160
@@ -447,26 +549,57 @@ def power_block(my_canvas,x,y):
             echoes -= 1
         
         #fae skills block
-        fae_skills_x = power_x+390
-        fae_skills_y = power_y+72
+        fae_skills_x = base_x
+        fae_skills_y = base_y-325
 
-        my_canvas.drawString(fae_skills_x, fae_skills_y, "Fae Skills")
+        my_canvas.drawString(fae_skills_x+60, fae_skills_y, "Fae Skills")
         fae_skills_y -= 15
-        my_canvas.drawString(fae_skills_x-60, fae_skills_y, "Kenning:")
-        faction_skill_assessment(ken,fae_skills_x+60, fae_skills_y)
+        my_canvas.drawString(fae_skills_x, fae_skills_y, "Kenning:")
+        faction_skill_assessment(ken,fae_skills_x+100, fae_skills_y)
         fae_skills_y -= 15
-        my_canvas.drawString(fae_skills_x-60, fae_skills_y, "Enigmas:")
-        faction_skill_assessment(enigmas,fae_skills_x+60, fae_skills_y)
+        my_canvas.drawString(fae_skills_x, fae_skills_y, "Enigmas:")
+        faction_skill_assessment(enigmas,fae_skills_x+100, fae_skills_y)
         fae_skills_y -= 15
-        my_canvas.drawString(fae_skills_x-60, fae_skills_y, "Gramarye: "+gramarye_specialty)
-        faction_skill_assessment(gram,fae_skills_x+60, fae_skills_y)
+        my_canvas.drawString(fae_skills_x, fae_skills_y, "Gramarye: "+gramarye_specialty)
         fae_skills_y -= 15
-        my_canvas.line(fae_skills_x-70, fae_skills_y, fae_skills_x+180, fae_skills_y)
-        fae_skills_y -= 20
-        my_canvas.drawString(fae_skills_x, fae_skills_y, "Oath Pool")
+        faction_skill_assessment(gram,fae_skills_x+100, fae_skills_y)
+        fae_skills_y -= 15
+        my_canvas.line(fae_skills_x, fae_skills_y, fae_skills_x+160, fae_skills_y)
+        my_canvas.line(fae_skills_x+160, fae_skills_y+90, fae_skills_x+160, fae_skills_y)
 
+        #fae dominions block
+        dominions_x = power_x+390
+        dominions_y = power_y+72
 
+        my_canvas.drawString(dominions_x, dominions_y, "Dominions")
+        dominions_y -= 15
+        if court == "Solstice":
+            pass
+        else:
+            dominions_y -= 15
+            my_canvas.drawString(dominions_x+2, dominions_y, "Favored")
+            dominions_y -= 15
+            my_canvas.drawString(dominions_x-60, dominions_y, factions[faction]["Court"][court]["Favored Dominion"])
+            powers_rank_assessment(factions[faction]["Court"][court]["Favored Dominion"],dominions_x-180, dominions_y)
+            # assess
+            dominions_y -= 15
+        my_canvas.drawString(dominions_x+7, dominions_y, "Other")
+        dominions_y -= 15
+        for d in factions[faction]["Dominions"]:
+            if d == factions[faction]["Court"][court]["Favored Dominion"]:
+                pass
+            else:
+                my_canvas.drawString(dominions_x-60, dominions_y, d)
+                powers_rank_assessment(d,dominions_x-180, dominions_y)
+                dominions_y -= 15
+        my_canvas.line(dominions_x-70, dominions_y, dominions_x+180, dominions_y)
+        dominions_y -= 15
 
+        #fae oath block
+        oath_x = dominions_x-60
+        oath_y = dominions_y
+
+        fae_oaths(oath_x,oath_y)
     else:
         my_canvas.drawString(base_x+170, base_y-90, "Invalid Faction.  Get it together "+player_name)
 

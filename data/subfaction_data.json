@@ -284,6 +284,12 @@
                 "Weakness" : "Can craft oaths equal to half that allowed by their Weaving and Gramyre rounded down"
             }
         },
+        "Dominions" : [
+            "Dawn",
+            "Day",
+            "Dusk",
+            "Night"
+        ],
         "Gramarye" : [
             "Oaths",
             "Powders",
