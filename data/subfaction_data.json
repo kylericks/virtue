@@ -585,6 +585,342 @@
                 "Max Gift Level" : 4,
                 "Renown Required" : 23
             }
+        },
+        "Gifts" : {
+            "Homid" : {
+                "Rank 1" : [
+                    "Master of Fire",
+                    "Persuasion",
+                    "Reshape Object"
+                ],
+                "Rank 2" : [
+                    "Staredown",
+                    "Bury the Wolf"
+                ],
+                "Rank 3" : [
+                    "Calm the Savage Beast"
+                ],
+                "Rank 4" : [
+                    "False Comfort"
+                ]                   
+            },
+            "Metis" : {
+                "Rank 1" : [
+                    "Create Element",
+                    "Sense Wyrm",
+                    "Shed"
+                ],
+                "Rank 2" : [
+                    "Curse of the Hatred",
+                    "Wither Limb"
+                ],
+                "Rank 3" : [
+                    "Mental Speech"
+                ],
+                "Rank 4" : [
+                    "Madness"
+                ]
+            },        
+            "Lupus" : {
+                "Rank 1" : [
+                    "Sense the Unnatural",
+                    "Name the Spirit",
+                    "Frenzy Control"
+                ],
+                "Rank 2" : [
+                    "Devil's Child",
+                    "Elemental Gift"
+                ],
+                "Rank 3" : [
+                    "Howl of Rage"
+                ],
+                "Rank 4" : [
+                    "See Invisible"
+                ]
+            },
+            "Ragabash" : {
+                "Rank 1" : [
+                    "Blissful Ignorance",
+                    "Blur the Milky Eye",
+                    "Leper's Curse"
+                ],
+                "Rank 2" : [
+                    "Reynard's Lie",
+                    "Evade"
+                ],
+                "Rank 3" : [
+                    "Luna's Blessing"
+                ],
+                "Rank 4" : [
+                    "Thieving Talons"
+                ]                 
+            },
+            "Theurge" : {
+                "Rank 1" : [
+                    "Sense Wyrm",
+                    "Command Spirit",
+                    "Sight from Beyond"
+                ],
+                "Rank 2" : [
+                    "Mother's Touch",
+                    "Spirit Wassail"
+                ],
+                "Rank 3" : [
+                    "Grasp of Beyond"
+                ],
+                "Rank 4" : [
+                    "Nightmare Possession"
+                ]
+            },        
+            "Philodox" : {
+                "Rank 1" : [
+                    "Warrior's Eye",
+                    "Scent the True Form",
+                    "Sense Truth"
+                ],
+                "Rank 2" : [
+                    "Strength of Purpose",
+                    "Resist Pain"
+                ],
+                "Rank 3" : [
+                    "Roll Over"
+                ],
+                "Rank 4" : [
+                    "Geas"
+                ]
+            },
+            "Galliard" : {
+                "Rank 1" : [
+                    "Call of the Wyld",
+                    "Waking Dream",
+                    "Call of the Wyrm"
+                ],
+                "Rank 2" : [
+                    "Taunt",
+                    "Song of Mockery"
+                ],
+                "Rank 3" : [
+                    "Song of Vengeance"
+                ],
+                "Rank 4" : [
+                    "Song of Rage"
+                ]                  
+            },
+            "Ahroun" : {
+                "Rank 1" : [
+                    "Razor Claws",
+                    "Inspiration",
+                    "Strength of the Wolf"
+                ],
+                "Rank 2" : [
+                    "Heart of Fury",
+                    "True Fear"
+                ],
+                "Rank 3" : [
+                    "Stoking Fury's Furnace"
+                ],
+                "Rank 4" : [
+                    "Kiss of Helios"
+                ]
+            },        
+            "Black Fury" : {
+                "Rank 1" : [
+                    "Sense Wyrm",
+                    "Curse of Aeolus",
+                    "Bow of the Pegasus"
+                ],
+                "Rank 2" : [
+                    "Flames of Hestia",
+                    "Body Wrack"
+                ],
+                "Rank 3" : [
+                    "Coup de Grace"
+                ],
+                "Rank 4" : [
+                    "Gaze of the Gorgon"
+                ]
+            },
+            "Bone Gnawer" : {
+                "Rank 1" : [
+                    "Resist Toxin",
+                    "Cornered Rat",
+                    "Plague Visage"
+                ],
+                "Rank 2" : [
+                    "Call the Rust",
+                    "Friend in Need"
+                ],
+                "Rank 3" : [
+                    "Survivor"
+                ],
+                "Rank 4" : [
+                    "Invisibility"
+                ]                
+            },
+            "Children of Gaia" : {
+                "Rank 1" : [
+                    "Mother's Touch",
+                    "Resist Pain",
+                    "Spirit Friend"
+                ],
+                "Rank 2" : [
+                    "Luna's Armor",
+                    "The Living Wood"
+                ],
+                "Rank 3" : [
+                    "Halo of the Sun"
+                ],
+                "Rank 4" : [
+                    "Angel's Semblance"
+                ]
+            },        
+            "Fenrir" : {
+                "Rank 1" : [
+                    "Resist Pain",
+                    "Hunter's Harmony",
+                    "Visage of Fenris"
+                ],
+                "Rank 2" : [
+                    "Halt the Coward's Flight",
+                    "Might of Thor"
+                ],
+                "Rank 3" : [
+                    "Iron Cannot Pierce"
+                ],
+                "Rank 4" : [
+                    "Blaze of Glory"
+                ]
+            },
+            "Fianna" : {
+                "Rank 1" : [
+                    "Resist Toxin",
+                    "Fear",
+                    "Force Passion"
+                ],
+                "Rank 2" : [
+                    "Faerie Aid",
+                    "Balor's Gaze"
+                ],
+                "Rank 3" : [
+                    "Semblance"
+                ],
+                "Rank 4" : [
+                    "Fog of the Moor"
+                ]          
+            },
+            "Red Talon" : {
+                "Rank 1" : [
+                    "Prey's Cry",
+                    "Wolf at the Door",
+                    "Beast Mind"
+                ],
+                "Rank 2" : [
+                    "Trackless Waste",
+                    "Quicksand"
+                ],
+                "Rank 3" : [
+                    "Gaia's Vengeance"
+                ],
+                "Rank 4" : [
+                    "Share the Wolf's Skin"
+                ]
+            },        
+            "Shadow Lord" : {
+                "Rank 1" : [
+                    "Aura of Confidence",
+                    "Fatal Flaw",
+                    "Clap of Thunder"
+                ],
+                "Rank 2" : [
+                    "Luna's Armor",
+                    "Dolorous Strike"
+                ],
+                "Rank 3" : [
+                    "Obedience"
+                ],
+                "Rank 4" : [
+                    "Raven's Curse"
+                ]
+            },
+            "Silent Strider" : {
+                "Rank 1" : [
+                    "ST ONLY - Fast OOG"
+                ],
+                "Rank 2" : [
+                    "Fleet Footed"
+                ],
+                "Rank 3" : [
+                    "Breach the Umbra"
+                ]             
+            },
+            "Silver Fang" : {
+                "Rank 1" : [
+                    "Sense Wyrm",
+                    "Empathy",
+                    "Lambent Flame"
+                ],
+                "Rank 2" : [
+                    "Luna's Armor",
+                    "Exceptional Swordplay"
+                ],
+                "Rank 3" : [
+                    "Lordly Will"
+                ],
+                "Rank 4" : [
+                    "Sidestep Death"
+                ]
+            },        
+            "Warder of Man" : {
+                "Rank 1" : [
+                    "Persuasion",
+                    "Mask the Predator",
+                    "Artisan's Command"
+                ],
+                "Rank 2" : [
+                    "Perfect Dodge",
+                    "Remove Taint"
+                ],
+                "Rank 3" : [
+                    "Doppelganger"
+                ],
+                "Rank 4" : [
+                    "Command the Blaze"
+                ]
+            },
+            "Black Spiral Dancer" : {
+                "Rank 1" : [
+                    "Wyrm Hide",
+                    "Repress Taint",
+                    "Resist Pain"
+                ],
+                "Rank 2" : [
+                    "Toxic Claws",
+                    "Dagger of the Mind"
+                ],
+                "Rank 3" : [
+                    "Doppelganger"
+                ],
+                "Rank 4" : [
+                    "Avatar of the Wyrm"
+                ]
+            },
+            "Corax" : {
+                "Rank 1" : [
+                    "Truth of Gaia",
+                    "Carrion Call",
+                    "Scent of the True Form"
+                ],
+                "Rank 2" : [
+                    "Flight of the Swift",
+                    "Frenzy Immunity"
+                ],
+                "Rank 3" : [
+                    "Dark Truths"
+                ],
+                "Rank 4" : [
+                    "Helios' Child"
+                ]
+            }
         }
     }
 }
