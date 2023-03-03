@@ -1,75 +1,107 @@
 {
     "Mage" : {
-        "Ahl-i-Batin" : {
-            "XP Cost" : 4,
-            "Foundation" : "Al-Ikhlas",
-            "Pillars" : [
-                "Al-Anbiya",
-                "Al-Fatihah",
-                "Al-Hajj",
-                "Al-Layl"
-            ]
+        "Fellowships" : {
+            "Ahl-i-Batin" : {
+                "XP Cost" : 4,
+                "Foundation" : "Al-Ikhlas",
+                "Pillars" : [
+                    "Al-Anbiya",
+                    "Al-Fatihah",
+                    "Al-Hajj",
+                    "Al-Layl"
+                ]
+            },
+            "Messianic Voice" : {
+                "XP Cost" : 0,
+                "Foundation" : "Deity",
+                "Pillars" : [
+                    "Gavri-El",
+                    "Mikha-El", 
+                    "Repha-El",
+                    "Uri-El"
+                ]        
+            },
+            "Old Faith" : {
+                "XP Cost" : 0,
+                "Foundation" : "Spontaneity",
+                "Pillars" : [
+                    "Autumn",
+                    "Spring",
+                    "Summer",
+                    "Winter"
+                ] 
+            },
+            "Order of Hermes" : {
+                "XP Cost" : 0,
+                "Foundation" : "Modus",
+                "Pillars" : [
+                    "Anima",
+                    "Corona",
+                    "Primus",
+                    "Vires"
+                ] 
+            },
+            "Spirit Talker" : {
+                "XP Cost" : 0,
+                "Foundation" : "Sensitivity",
+                "Pillars" : [
+                    "Chieftain",
+                    "Trickster",
+                    "Warrior",
+                    "Wise One"
+                ] 
+            },
+            "Valdaerman" : {
+                "XP Cost" : 0,
+                "Foundation" : "Blot",
+                "Pillars" : [
+                    "Fara",
+                    "Forlog",
+                    "Galdar",
+                    "Hjaldar"
+                ] 
+            },
+            "Veneficti" : {
+                "XP Cost" : 10,
+                "Foundation" : "Sin",
+                "Pillars" : [
+                    "Abomination",
+                    "Subversion",
+                    "Malediction",
+                    "Diabolism"
+                ] 
+            }
         },
-        "Messianic Voice" : {
-            "XP Cost" : 0,
-            "Foundation" : "Deity",
-            "Pillars" : [
-                "Gavri-El",
-                "Mikha-El", 
-                "Repha-El",
-                "Uri-El"
-            ]        
-        },
-        "Old Faith" : {
-            "XP Cost" : 0,
-            "Foundation" : "Spontaneity",
-            "Pillars" : [
-                "Autumn",
-                "Spring",
-                "Summer",
-                "Winter"
-            ] 
-        },
-        "Order of Hermes" : {
-            "XP Cost" : 0,
-            "Foundation" : "Modus",
-            "Pillars" : [
-                "Anima",
-                "Corona",
-                "Primus",
-                "Vires"
-            ] 
-        },
-        "Spirit Talker" : {
-            "XP Cost" : 0,
-            "Foundation" : "Sensitivity",
-            "Pillars" : [
-                "Chieftain",
-                "Trickster",
-                "Warrior",
-                "Wise One"
-            ] 
-        },
-        "Valdaerman" : {
-            "XP Cost" : 0,
-            "Foundation" : "Blot",
-            "Pillars" : [
-                "Fara",
-                "Forlog",
-                "Galdar",
-                "Hjaldar"
-            ] 
-        },
-        "Veneficti" : {
-            "XP Cost" : 10,
-            "Foundation" : "Sin",
-            "Pillars" : [
-                "Abomination",
-                "Subversion",
-                "Malediction",
-                "Diabolism"
-            ] 
-        }
+        "Pillars" : [
+            "Al-Anbiya",
+            "Al-Fatihah",
+            "Al-Hajj",
+            "Al-Layl",
+            "Gavri-El",
+            "Mikha-El", 
+            "Repha-El",
+            "Uri-El",
+            "Autumn",
+            "Spring",
+            "Summer",
+            "Winter",
+            "Anima",
+            "Corona",
+            "Primus",
+            "Vires",
+            "Chieftain",
+            "Trickster",
+            "Warrior",
+            "Wise One",
+            "Fara",
+            "Forlog",
+            "Galdar",
+            "Hjaldar",
+            "Abomination",
+            "Subversion",
+            "Malediction",
+            "Diabolism"            
+        ]
     },
     "Vampire" : {
         "Disciplines" : [
@@ -329,6 +361,99 @@
                 "Energy" : "Gnosis",
                 "Benefits" : "Oaths, Quick to Learn, Immune to Delirium",
                 "Weaknesses" : "The Curse"
+            }
+        },
+        "Merits" : {
+            "Specialist" : {
+                "Requirements" : {
+                    "Trade" : 4,
+                    "Willpower" : 7
+                },
+                "Effect" : "Gain +4 Commodity Tags of your chosen profession at Check In."
+            },
+            "Hobbyist" : {
+                "Requirements" : {
+                    "Trade" : 4,
+                    "Willpower" : 10
+                },
+                "Effect" : "You may purchase Trade a second time and choose a different profession. Collect Commodity Tags for both Trade skills each Check In."
+            },
+            "Resilience" : {
+                "Requirements" : {
+                    "Melee" : 4,
+                    "Smithing" : 4,
+                    "Brawl" : 4,
+                    "Archery" : 4,
+                    "Dodge" : 4,
+                    "Intimidate" : 4,
+                    "Escape Artist" : 4
+                },
+                "Effect" : "Gain Resist Status 3 times per day."
+            },
+            "Alchemic Prodigy" : {
+                "Requirements" : {
+                    "Alchemy" : 4,
+                    "Literacy" : 1,
+                    "Medicine" : 2,
+                    "Willpower" : 8
+                    },
+                "Effect" : "When you purchase your first potion/poison of each dot level at Check In you gain an additional potion/poison of the same type for free."
+            },           
+            "Master of Shadows" : {
+                "Requirements" : {
+                    "Melee" : 4,
+                    "Stealth" : 4,
+                    "Brawl" : 4,
+                    "Archery" : 4,
+                    "Dodge" : 4,
+                    "Escape Artist" : 4,
+                    "Willpower" : 6
+                },
+                "Effect" : "Gain Invisibility once per day, Heightened Senses."
+            }, 
+            "Master Crafter" : {
+                "Requirements" : {
+                    "Smithing" : 4,
+                    "Literacy" : 2,
+                    "Willpower" : 8
+                },
+                "Effect" : "Gain the following.  Enter game with 0 Willpower Points: May create a single weapon with permanent +1 augment or a single piece of armor with +1 Damage Resistance instead of crafting any other items with the Smithing Skill."
+            },
+            "Wardancer" : {
+                "Requirements" : {
+                    "Melee" : 4,
+                    "Dodge" : 4,
+                    "Brawl" : 4,
+                    "Willpower" : 10
+                },
+                "Effect" : "The Perfect Dodge uses you gain from Dodge change from per day to per hour."
+            },
+            "Master of Battle" : {
+                "Requirements" : {
+                    "Melee" : 4,
+                    "Intimidate" : 4,
+                    "Brawl" : 4,
+                    "Willpower" : 10
+                },
+                "Effect" : "Gain Augment 2."
+            },
+            "Unkillable" : {
+                "Requirements" : {
+                    "Resilience" : 1,
+                    "Willpower" : 10,
+                    "Revived" : 1
+                },
+                "Effect" : "Gain Soak Agg 1 and, instead of following the normal rules for Incapacitation replace with the following: Do not enter the Dying state. If, after 1 minute, you have not taken your entire Health Pool in Aggravated damage heal 1 Health Point."
+            },           
+            "Hedge Mage" : {
+                "Requirements" : {
+                    "Alchemy" : 4,
+                    "Literacy" : 3,
+                    "Medicine" : 4,
+                    "Fortune Telling" : 4,
+                    "Willpower" : 7
+                },
+                "Effect" : "Pick 1 Pillar from a Mage Tradition. You can cast the 1 Dot spells from that pillar with 1 minute of ritual role play."
             }
         }
     },

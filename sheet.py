@@ -12,8 +12,8 @@ import textwrap
 pc_name = " "
 player_name = " "
 xp_total = str()
-faction = "Human"
-subfaction = "Commoner"
+faction = "Vampire"
+subfaction = "Cappadocian"
 energy_type = str()
 health = str()
 willpower = str()
@@ -48,17 +48,80 @@ pc_skills = {
     "mele": 0,
     "smth": 0,
     "stel": 0,
-    "trde": 0,
-    "trade_specialty": " "
+    "trde": 4,
+    "trade_specialty": "Mining",
+    "trde2": 2,
+    "trade_specialty2": "Dancing",
 }
 
+
+'''
 pc_trees = {
-    "Dawn":1,
-    "Day":0,
-    "Dusk":2,
-    "Night":3
+    "Animalism":0,
+    "Auspex":0,
+    "Celerity":0,
+    "Chimerstry":0,
+    "Daimoinion":1,
+    "Dementation":0,
+    "Dominate":0,
+    "Fortitude":0,
+    "Mortis: Grave's Decay":0,
+    "Mortis: Corpse in the Monster":1,
+    "Mortis: Cadaverous Animation":0,
+    "Obfuscate":0,
+    "Obtenebration":0,
+    "Potence":0,
+    "Presence":0,
+    "Protean":0,
+    "Quietus":0,
+    "Serpentis":0,
+    "Valeren (Healing)":0,
+    "Valeren (Warrior)":0,
+    "Vicissitude":0,
+    "Al-Anbiya":0,
+    "Al-Fatihah":0,
+    "Al-Hajj":0,
+    "Al-Layl":0,
+    "Gavri-El":0,
+    "Mikha-El":0, 
+    "Repha-El":0,
+    "Uri-El":0,
+    "Autumn":0,
+    "Spring":0,
+    "Summer":0,
+    "Winter":0,
+    "Anima":0,
+    "Corona":0,
+    "Primus":0,
+    "Vires":0,
+    "Chieftain":0,
+    "Trickster":0,
+    "Warrior":0,
+    "Wise One":0,
+    "Fara":0,
+    "Forlog":0,
+    "Galdar":0,
+    "Hjaldar":0,
+    "Abomination":0,
+    "Subversion":0,
+    "Malediction":1,
+    "Diabolism":0
 }
 '''
+
+pc_merits = {
+    "Specialist":0,
+    "Hobbyist":0,
+    "Resilience":0,
+    "Alchemic Prodigy":0,
+    "Master of Shadows":0,
+    "Master Crafter":0,
+    "Wardancer":0,
+    "Master of Battle":0,
+    "Unkillable":0,
+    "Hedge Mage":1
+}
+
 pc_trees = {
     "Animalism":1,
     "Auspex":0,
@@ -82,13 +145,20 @@ pc_trees = {
     "Valeren (Warrior)":0,
     "Vicissitude":0
 }
-
+'''
 pc_trees = {
     "Blot":1,
     "Fara":0,
     "Forlog":0,
     "Galdar":0,
     "Hjaldar":0
+}
+
+pc_trees = {
+    "Dawn":1,
+    "Day":0,
+    "Dusk":2,
+    "Night":3
 }
 '''
 
@@ -116,11 +186,8 @@ base_y = 750
 with open(os.path.join(os.path.dirname(__file__),'data','subfaction_data.json'),"r") as factions_file:
     factions = json.load(factions_file)
 
-def borders(my_canvas,base_x,base_y):
-    my_canvas.line(base_x, base_y-70, base_x+570, base_y-70)
-    my_canvas.line(base_x, base_y-310, base_x+320, base_y-310)
-    my_canvas.line(base_x+160, base_y-70, base_x+160, base_y-310)
-    my_canvas.line(base_x+320, base_y-70, base_x+320, base_y-310)
+#def borders(my_canvas,base_x,base_y):
+#    my_canvas.line(base_x+320, base_y-70, base_x+320, base_y-310)
 
 def vitae_pool():
     global energy_pool
@@ -168,7 +235,8 @@ def determine_energy():
             energy_type = "Vitae"
             energy_pool = "10"
         elif subfaction == "Gifted Kinfolk":
-            pass
+            energy_type = "Gnosis"
+            energy_pool = "1"
         else:
             energy_type = "None"
             energy_pool = "None"
@@ -201,11 +269,18 @@ def header_block(my_canvas,base_x,base_y):
         my_canvas.drawString(base_x, base_y-55, "XP Total:        "+str(xp_total))    
         determine_energy()
         my_canvas.drawString(base_x+200, base_y-55, "Energy Type:  "+str(energy_type))        
-        my_canvas.drawString(base_x+400, base_y-55, "Energy Pool: "+str(energy_pool))       
+        my_canvas.drawString(base_x+400, base_y-55, "Energy Pool: "+str(energy_pool))
+    my_canvas.line(base_x, base_y-70, base_x+570, base_y-70)
+  
 
-def trade_specialization(name,x,y):
+def trade_specialization(name,abbr,x,y):
     if name == "Trade":
-        my_canvas.drawString(x, y, str(name)+": "+str(pc_skills.get("trade_specialty")))
+        if abbr == "trde":
+            my_canvas.drawString(x, y, str(name)+": "+str(pc_skills.get("trade_specialty")))
+        elif abbr == "trde2":
+            my_canvas.drawString(x, y, str(name)+": "+str(pc_skills.get("trade_specialty2")))
+        else:
+            pass
     else:
         my_canvas.drawString(x, y, str(name)+": ")
 
@@ -215,7 +290,7 @@ def skills_rank_assessment(name,ability,x,y):
     skills_x = x+100
     skills_y = y+3
 
-    trade_specialization(name,x,y)
+    trade_specialization(name,ability,x,y)
     while dots <= 3:
         if skill_rank >= 1:
             my_canvas.circle(skills_x, skills_y, 5, fill=1)
@@ -233,6 +308,14 @@ def skills_block(my_canvas,base_x,base_y):
         skill_abbr = skills_dict.get(name)
         skills_rank_assessment(name,skill_abbr,base_x,y)
         y = y-15
+    if pc_merits.get("Hobbyist") == 1:
+        skills_rank_assessment("Trade","trde2",base_x,y)
+        y -= 15
+        my_canvas.line(x, y, x+160, y)
+        my_canvas.line(x+160, y, x+160, y+260)        
+    else:
+        my_canvas.line(x, y, x+160, y)
+        my_canvas.line(x+160, y, x+160, y+245)
 
 def powers_rank_assessment(ability,x,y):
     power_rank = pc_trees.get(ability)
@@ -249,6 +332,17 @@ def powers_rank_assessment(ability,x,y):
             dots += 1
             power_rank -= 1
             powers_x = powers_x+15
+    if faction == "Human":
+        if subfaction == "Ghoul":
+            if power_rank >= 1:
+                my_canvas.circle(powers_x, powers_y, 5, fill=1)
+            else:
+                my_canvas.circle(powers_x, powers_y, 5, fill=0)
+            powers_x = powers_x+15        
+        elif subfaction == "Gifted Kinfolk":
+            pass
+        else:
+            pass
     else:
         while dots <= 3:
             if power_rank >= 1:
@@ -312,7 +406,10 @@ def vampire_conditionals(b_x,b_y):
     for line in road_aura:
         my_canvas.drawString(base_x, flaw_y, line)
         flaw_y = flaw_y-15
-    my_canvas.line(base_x, flaw_y, base_x+320, flaw_y)
+    my_canvas.line(x-330, flaw_y, x-10, flaw_y)
+    my_canvas.line(x-170, base_y-315, x-10, base_y-315)
+    my_canvas.line(x-10, base_y-315, x-10, flaw_y)    
+
 
 def rotes_block(my_canvas,x,y):
     rotes_x = x+330
@@ -436,6 +533,40 @@ def fae_oaths(x,y):
         pass
     my_canvas.line(x-10, y, x+240, y)
 
+def merits(x,y):
+    y = y+72
+    x = x+170
+    
+    my_canvas.drawString(x+50, y, "Merits")
+    y -= 15
+    for m in pc_merits:
+        my_canvas.drawString(x, y, m)
+        if pc_merits.get(m) >= 1:
+            my_canvas.circle(x+135, y, 5, fill=1)
+        else:
+            my_canvas.circle(x+135, y, 5, fill=0)
+        y -= 15
+    my_canvas.line(x-10,y,x+150,y)
+
+def hedge(x,y):
+    y = y-90
+    x = x+170
+
+    y -= 20
+    if pc_merits.get("Hedge Mage") == 1:
+        my_canvas.drawString(x+30, y, "Hedge Magic")
+        y -= 20
+        for p in factions["Mage"]["Pillars"]:
+            if pc_trees.get(p) == 1:
+                my_canvas.drawString(x, y, p)
+                my_canvas.circle(x+135, y, 5, fill=1)
+                y -= 15
+            else:
+                pass
+    else:
+        pass
+    my_canvas.line(x-10,y,x+150,y)
+
     
 
 def power_block(my_canvas,x,y):
@@ -443,7 +574,37 @@ def power_block(my_canvas,x,y):
     power_y = y-160
     
     if faction == "Human":
-        pass
+        merits(power_x,power_y)
+        hedge(power_x,power_y)
+        if subfaction == "Ghoul":
+            discp_x = x+330
+            discp_y = y-90
+            paths = []
+
+            my_canvas.drawString(discp_x+85, discp_y, "Disciplines")
+            discp_y = discp_y-15
+            for d in factions["Vampire"]["Disciplines"]:
+                if "Mortis" in d:
+                    path = d.removeprefix("Mortis: ")
+                    paths.append(path)
+                else:
+                    my_canvas.drawString(discp_x, discp_y, d)
+                    powers_rank_assessment(d,discp_x-80,discp_y)
+                    discp_y = discp_y-15
+            discp_y = discp_y-15
+            my_canvas.drawString(discp_x+85, discp_y, "Mortis")
+            for p in paths:
+                discp_y = discp_y-15
+                my_canvas.drawString(discp_x, discp_y, p)
+                powers_rank_assessment("Mortis: "+p,discp_x-80,discp_y)
+            my_canvas.line(x+320, y-70, x+320, y-445)
+            my_canvas.line(x+320, y-445, x+570, y-445)
+
+        elif subfaction == "Gifted Kinfolk":
+            pass
+        else:
+            pass
+
     elif faction == "Vampire":
         has_innate_mortis = 0
         has_mortis = 0
@@ -472,6 +633,7 @@ def power_block(my_canvas,x,y):
                 powers_rank_assessment(p,power_x,power_y)
                 power_y = power_y-15
                 innates.append(p) 
+            
         if has_innate_mortis == 1:
             power_y = power_y-10
             my_canvas.drawString(power_x+220, power_y, "Mortis")
@@ -480,6 +642,10 @@ def power_block(my_canvas,x,y):
                 my_canvas.drawString(power_x+170, power_y, p)
                 power_y = power_y-15
                 powers_rank_assessment("Mortis: "+p,power_x,power_y)
+            power_y -= 15
+        else:
+            pass
+        
         power_x = x+330
         power_y = y-90
         my_canvas.drawString(power_x+85, power_y, "Disciplines")
@@ -504,7 +670,7 @@ def power_block(my_canvas,x,y):
                 power_y = power_y-15
                 my_canvas.drawString(power_x, power_y, p)
                 powers_rank_assessment("Mortis: "+p,power_x-80,power_y)    
-        my_canvas.line(base_x+320, base_y-310, base_x+320, base_y-395)
+        my_canvas.line(base_x+320, y-70, base_x+320, base_y-395)
         vampire_conditionals(power_x,power_y)
         devotions_x = power_x
         devotions_y = power_y
@@ -517,10 +683,10 @@ def power_block(my_canvas,x,y):
         font_rank_assessment(power_x+250,power_y+45)
         my_canvas.line(base_x+160, base_y-130, base_x+320, base_y-130)
         my_canvas.drawString(power_x+190, power_y+15, "Foundation & Pillars")
-        my_canvas.drawString(power_x+170, power_y, factions[faction][subfaction]["Foundation"])
-        powers_rank_assessment(factions[faction][subfaction]["Foundation"],power_x,power_y)
+        my_canvas.drawString(power_x+170, power_y, factions[faction]["Fellowships"][subfaction]["Foundation"])
+        powers_rank_assessment(factions[faction]["Fellowships"][subfaction]["Foundation"],power_x,power_y)
         power_y = power_y-30
-        for p in factions[faction][subfaction]["Pillars"]:
+        for p in factions[faction]["Fellowships"][subfaction]["Pillars"]:
             my_canvas.drawString(power_x+170, power_y, p)
             powers_rank_assessment(p,power_x,power_y)
             my_canvas.drawString(power_x+190, power_y-15, "Foci :")
@@ -605,7 +771,7 @@ def power_block(my_canvas,x,y):
 
 if __name__ == '__main__':
     my_canvas = canvas.Canvas("sample_sheet.pdf",pagesize=letter)
-    borders(my_canvas,base_x,base_y)
+    #borders(my_canvas,base_x,base_y)
     header_block(my_canvas,base_x,base_y)
     skills_block(my_canvas,base_x,base_y)
     power_block(my_canvas,base_x,base_y)
