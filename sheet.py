@@ -292,12 +292,12 @@ def skills_rank_assessment(name,ability,x,y):
 
     trade_specialization(name,ability,x,y)
     while dots <= 3:
-        if skill_rank >= 1:
+        if skill_rank > 1: # type:ignore
             my_canvas.circle(skills_x, skills_y, 5, fill=1)
         else:
             my_canvas.circle(skills_x, skills_y, 5, fill=0)
         dots += 1
-        skill_rank -= 1
+        skill_rank -= 1 # type:ignore
         skills_x = skills_x+15
 
 def skills_block(my_canvas,base_x,base_y):
@@ -325,16 +325,16 @@ def powers_rank_assessment(ability,x,y):
 
     if faction == "Vampire":
         while dots <= 4:
-            if power_rank >= 1:
+            if power_rank >= 1: # type:ignore
                 my_canvas.circle(powers_x, powers_y, 5, fill=1)
             else:
                 my_canvas.circle(powers_x, powers_y, 5, fill=0)
             dots += 1
-            power_rank -= 1
+            power_rank -= 1 # type:ignore
             powers_x = powers_x+15
     if faction == "Human":
         if subfaction == "Ghoul":
-            if power_rank >= 1:
+            if power_rank >= 1: # type:ignore
                 my_canvas.circle(powers_x, powers_y, 5, fill=1)
             else:
                 my_canvas.circle(powers_x, powers_y, 5, fill=0)
@@ -345,12 +345,12 @@ def powers_rank_assessment(ability,x,y):
             pass
     else:
         while dots <= 3:
-            if power_rank >= 1:
+            if power_rank >= 1: # type:ignore
                 my_canvas.circle(powers_x, powers_y, 5, fill=1)
             else:
                 my_canvas.circle(powers_x, powers_y, 5, fill=0)
             dots += 1
-            power_rank -= 1
+            power_rank -= 1 # type:ignore
             powers_x = powers_x+15
 
 def faction_skill_assessment(skill,x,y):
@@ -541,7 +541,7 @@ def merits(x,y):
     y -= 15
     for m in pc_merits:
         my_canvas.drawString(x, y, m)
-        if pc_merits.get(m) >= 1:
+        if pc_merits.get(m) >= 1: # type:ignore
             my_canvas.circle(x+135, y, 5, fill=1)
         else:
             my_canvas.circle(x+135, y, 5, fill=0)
