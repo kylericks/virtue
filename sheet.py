@@ -12,8 +12,8 @@ import textwrap
 pc_name = " "
 player_name = " "
 xp_total = str()
-faction = "Vampire"
-subfaction = "Cappadocian"
+faction = "Human"
+subfaction = "Gifted Kinfolk"
 energy_type = str()
 health = str()
 willpower = str()
@@ -54,8 +54,6 @@ pc_skills = {
     "trade_specialty2": "Dancing",
 }
 
-
-'''
 pc_trees = {
     "Animalism":0,
     "Auspex":0,
@@ -105,9 +103,29 @@ pc_trees = {
     "Abomination":0,
     "Subversion":0,
     "Malediction":1,
-    "Diabolism":0
+    "Diabolism":0,
+    "Homid":1,
+    "Metis":0,
+    "Lupus":0,
+    "Ragabash":0,
+    "Theurge":0,
+    "Philodox":0,
+    "Galliard":0,
+    "Ahroun":0,
+    "Black Fury":0,
+    "Bone Gnawer":0,
+    "Children of Gaia":0,
+    "Fenrir":0,
+    "Fianna":0,
+    "Red Talon":0,
+    "Shadow Lord":0,
+    "Silent Strider":0,
+    "Silver Fang":0,
+    "Warder of Man":0,
+    "Black Spiral Dancer":0,
+    "Corax":0
 }
-'''
+
 
 pc_merits = {
     "Specialist":0,
@@ -121,7 +139,7 @@ pc_merits = {
     "Unkillable":0,
     "Hedge Mage":1
 }
-
+'''
 pc_trees = {
     "Animalism":1,
     "Auspex":0,
@@ -145,7 +163,7 @@ pc_trees = {
     "Valeren (Warrior)":0,
     "Vicissitude":0
 }
-'''
+
 pc_trees = {
     "Blot":1,
     "Fara":0,
@@ -340,7 +358,11 @@ def powers_rank_assessment(ability,x,y):
                 my_canvas.circle(powers_x, powers_y, 5, fill=0)
             powers_x = powers_x+15        
         elif subfaction == "Gifted Kinfolk":
-            pass
+            if power_rank >= 1: # type:ignore
+                my_canvas.circle(powers_x, powers_y, 5, fill=1)
+            else:
+                my_canvas.circle(powers_x, powers_y, 5, fill=0)
+            powers_x = powers_x+15  
         else:
             pass
     else:
@@ -601,7 +623,17 @@ def power_block(my_canvas,x,y):
             my_canvas.line(x+320, y-445, x+570, y-445)
 
         elif subfaction == "Gifted Kinfolk":
-            pass
+            gift_tree_x = x+330
+            gift_tree_y = y-90
+
+            my_canvas.line(x+320, y-70, x+320, y-400)
+            my_canvas.line(x+320, y-400, x+570, y-400)
+            my_canvas.drawString(gift_tree_x+85, gift_tree_y, "Gift Trees")
+            gift_tree_y = gift_tree_y-15
+            for tree in factions["Shifter"]["Gifts"]:
+                my_canvas.drawString(gift_tree_x, gift_tree_y, tree)
+                powers_rank_assessment(tree,gift_tree_x-80,gift_tree_y)
+                gift_tree_y = gift_tree_y-15
         else:
             pass
 
