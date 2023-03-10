@@ -44,17 +44,17 @@ skills_dict = {
 }
 skill_headings = ['Skill', '1','2','3','4']
 
-faction_tab = [[
-    sg.Text("Select your Faction", **text_style),
-    sg.Combo(factions,default_value=" ", **combo_style,key='faction_choice',enable_events=True,pad=(1, 1)),
-    sg.Text("Subfactions",key='subfaction_text', **text_style),
-    sg.Combo(subfactions,default_value=" ",**combo_style,key='subfaction_choice',enable_events=True,pad=(1, 1)),        
-    sg.Text("Energy Type: ", **text_style, key="energy_type",pad=(1, 1)),
-    ]]
+faction_tab = [
+    [sg.Text("Select your Faction", **text_style),
+    sg.Combo(factions,default_value=" ", **combo_style,key='faction_choice',enable_events=True,pad=(1, 1))],
+    [sg.Text("Subfactions",key='subfaction_text', **text_style),
+    sg.Combo(subfactions,default_value=" ",**combo_style,key='subfaction_choice',enable_events=True,pad=(1, 1))],        
+    [sg.Text("Energy Type: ", key="energy_type",pad=(1, 1))],
+    ]
     
 skills_tab = [[sg.T('Skillz yo')]]
-
-powers_tab = [[sg.T('Powers yo')],[sg.Input(key='in')]]
+powers_tab = [[sg.T('Powers yo')]]
+merits_tab = [[sg.T('Meritz yo')]]
 
 button_frame = [[
     sg.Button("Generate Sheet")
@@ -65,7 +65,9 @@ layout = [[
     sg.TabGroup([
         [sg.Tab('Factions', faction_tab),
         sg.Tab('Skills', skills_tab),
-        sg.Tab('Powers', powers_tab)]])],
+        sg.Tab('Merits', merits_tab),
+        sg.Tab('Powers', powers_tab)
+        ]])],
     [sg.Column(button_frame, pad=(0, None)),    
 ]]
 
@@ -88,28 +90,28 @@ while True:
         window["subfaction_text"].update("Select your Subfaction")
         window['subfaction_choice'].update(values=human_subfactions)
         if values['subfaction_choice'] == "Ghoul":
-            window["energy_type"].update("Energy Type: Vitae")
+            window["energy_type"].update("Energy Type:              Vitae")
             event, values = window.read()
         elif values['subfaction_choice'] == "Gifted Kinfolk":
-            window["energy_type"].update("Energy Type: Gnosis")
+            window["energy_type"].update("Energy Type:              Gnosis")
             event, values = window.read()
         else:
-            window["energy_type"].update("Energy Type: None")
+            window["energy_type"].update("Energy Type:              None")
             event, values = window.read()
         event, values = window.read()
     elif values['faction_choice'] == "Vampire":
         window["subfaction_text"].update("Select your Clan")
-        window["energy_type"].update("Energy Type: Vitae")
+        window["energy_type"].update("Energy Type:              Vitae")
         window['subfaction_choice'].update(values=vampire_subfactions)
         event, values = window.read()
     elif values['faction_choice'] == "Mage":
         window["subfaction_text"].update("Select your Fellowship")
-        window["energy_type"].update("Energy Type: Quintessence")
+        window["energy_type"].update("Energy Type:              Quintessence")
         window['subfaction_choice'].update(values=mage_subfactions)
         event, values = window.read()
     elif values['faction_choice'] == "Fae":
         window["subfaction_text"].update("Select your Origin")
-        window["energy_type"].update("Energy Type: Mists / Weaving")
+        window["energy_type"].update("Energy Type:              Mists / Weaving")
         window['subfaction_choice'].update(values=fae_subfactions)
         event, values = window.read()
     print(event, values)
